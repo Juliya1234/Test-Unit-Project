@@ -1,0 +1,10 @@
+E:\GitHub\SessionTestUnit\SessionTestUnit\obj\Debug\SessionTestUnit.csprojResolveAssemblyReference.cache
+E:\GitHub\SessionTestUnit\SessionTestUnit\obj\Debug\SessionTestUnit.Form1.resources
+E:\GitHub\SessionTestUnit\SessionTestUnit\obj\Debug\SessionTestUnit.Properties.Resources.resources
+E:\GitHub\SessionTestUnit\SessionTestUnit\obj\Debug\SessionTestUnit.csproj.GenerateResource.Cache
+E:\GitHub\SessionTestUnit\SessionTestUnit\obj\Debug\SessionTestUnit.resultForm.resources
+E:\GitHub\SessionTestUnit\SessionTestUnit\bin\Debug\Test Unit.exe.config
+E:\GitHub\SessionTestUnit\SessionTestUnit\bin\Debug\Test Unit.exe
+E:\GitHub\SessionTestUnit\SessionTestUnit\bin\Debug\Test Unit.pdb
+E:\GitHub\SessionTestUnit\SessionTestUnit\obj\Debug\Test Unit.exe
+E:\GitHub\SessionTestUnit\SessionTestUnit\obj\Debug\Test Unit.pdb
