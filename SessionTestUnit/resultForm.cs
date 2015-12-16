@@ -33,14 +33,14 @@ namespace SessionTestUnit
         private string get_swearing(double res)
         {
             if (res >= 90)
-                return "Круто, долбанный ботаник";
+                return "Круто";
             if ((res >= 75) && (res < 90))
-                return "Слабовато.\r\nДаже твоя жирная мамаша может лучше";
+                return "Я знаю, ты можешь лучше";
             if ((res >= 60) && (res < 75))
-                return "Да ты шутишь?\r\nАутист с 4 классами образования смог бы лучше";
+                return "Ну ничего, в другой раз повезет";
             if ((res >= 50) && (res < 60))
-                return "Хуже уже быть не может, дубина";
-            return "Просто нет слов";
+                return "Неудачный день?";
+            return "Это провал";
         }
         private void create_labels(List<AnsweredQuestion> hash)
         {
