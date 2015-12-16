@@ -117,7 +117,7 @@ namespace SessionTestUnit
                     string text = reader.ReadToEnd();
                     reader.Close();
                     load_source_file(text);
-                    label2.Text = "ФАйл загружен. Нажмите \"Начать\"";
+                    label2.Text = "Файл загружен. Нажмите \"Начать\"";
                     loaded_file = true;
                 }
                 catch (Exception ex)
