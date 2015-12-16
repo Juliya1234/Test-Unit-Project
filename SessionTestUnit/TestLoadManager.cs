@@ -17,7 +17,7 @@ namespace SessionTestUnit
 
         public void set_source_list(string text)  
         {
-            
+            list = new List<TestQuestion>(0);
             int count = (text.Length - text.Replace("<question>", "").Length) / "<question>".Length;
             for (int i = 0; i < count; i++)
             {

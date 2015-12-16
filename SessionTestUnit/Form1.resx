@@ -117,12 +117,18 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <metadata name="openFileDialog1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>17, 17</value>
-  </metadata>
   <metadata name="menuStrip1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>184, 17</value>
   </metadata>
+  <data name="start_label.Text" xml:space="preserve">
+    <value>Добро пожаловать в программу тестироания
+
+Программа разработана потому что делать было нечего. Все права принадлежат всем. Но если Вы благодарны разработчику, то крикните в окно "Спасибо". Этого будет достаточно
+
+В первую очередь необходимо скопировать тесты в файл с расширением *.txt. Для начала тестирования следует нажать "Ресурс" -&gt; "Загрузить".
+
+Откроется окно выбора исходного файла с вопросами. Выбираете свой и нажимаете "Открыть"</value>
+  </data>
   <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
   <data name="$this.Icon" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
