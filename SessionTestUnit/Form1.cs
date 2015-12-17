@@ -21,6 +21,7 @@ namespace SessionTestUnit
         private int rigth_checked = 0;
         private bool loaded_file = false;
         private string version = "0.1";
+        private string file_name = "";
         public Form1()
         {
             InitializeComponent();
@@ -33,8 +34,11 @@ namespace SessionTestUnit
             load_settings();
 
         }
-        private void load_source_file(string text)
+        private void load_source_file(string filename)
         {
+            var reader = new StreamReader(filename, Encoding.Default);
+            string text = reader.ReadToEnd();
+            reader.Close();
             manager.set_source_list(text);
             current_question = manager.get_next();
             count += 1;
@@ -113,12 +117,10 @@ namespace SessionTestUnit
             {
                 try
                 {
-                    var reader = new StreamReader(openFileDialog1.FileName, Encoding.Default);
-                    string text = reader.ReadToEnd();
-                    reader.Close();
-                    load_source_file(text);
+                    load_source_file(openFileDialog1.FileName);
                     label2.Text = "Файл загружен. Нажмите \"Начать\"";
                     loaded_file = true;
+                    file_name = openFileDialog1.FileName;
                 }
                 catch (Exception ex)
                 {
@@ -256,6 +258,16 @@ namespace SessionTestUnit
         private void start_panel_Paint(object sender, PaintEventArgs e)
         {
 
+        }
+
+        private void начатьЗановоToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            if (file_name != "")
+            {
+                label1.Text = "";
+                load_source_file(file_name);
+                load_settings();
+            }
         }
     }
 }

@@ -46,6 +46,8 @@
             this.label2 = new System.Windows.Forms.Label();
             this.button2 = new System.Windows.Forms.Button();
             this.start_label = new System.Windows.Forms.Label();
+            this.тестированиеToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.начатьЗановоToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.question_panel.SuspendLayout();
             this.start_panel.SuspendLayout();
@@ -159,10 +161,11 @@
             this.menuStrip1.Font = new System.Drawing.Font("HelveticaNeueCyr", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.menuStrip1.ImageScalingSize = new System.Drawing.Size(20, 20);
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.ресурсToolStripMenuItem});
+            this.ресурсToolStripMenuItem,
+            this.тестированиеToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(747, 27);
+            this.menuStrip1.Size = new System.Drawing.Size(747, 28);
             this.menuStrip1.TabIndex = 9;
             this.menuStrip1.Text = "menuStrip1";
             // 
@@ -171,7 +174,7 @@
             this.ресурсToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.загрузитьToolStripMenuItem});
             this.ресурсToolStripMenuItem.Name = "ресурсToolStripMenuItem";
-            this.ресурсToolStripMenuItem.Size = new System.Drawing.Size(78, 23);
+            this.ресурсToolStripMenuItem.Size = new System.Drawing.Size(78, 24);
             this.ресурсToolStripMenuItem.Text = "Ресурс";
             // 
             // загрузитьToolStripMenuItem
@@ -265,6 +268,21 @@
             this.start_label.TabIndex = 0;
             this.start_label.Text = resources.GetString("start_label.Text");
             // 
+            // тестированиеToolStripMenuItem
+            // 
+            this.тестированиеToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.начатьЗановоToolStripMenuItem});
+            this.тестированиеToolStripMenuItem.Name = "тестированиеToolStripMenuItem";
+            this.тестированиеToolStripMenuItem.Size = new System.Drawing.Size(131, 24);
+            this.тестированиеToolStripMenuItem.Text = "Тестирование";
+            // 
+            // начатьЗановоToolStripMenuItem
+            // 
+            this.начатьЗановоToolStripMenuItem.Name = "начатьЗановоToolStripMenuItem";
+            this.начатьЗановоToolStripMenuItem.Size = new System.Drawing.Size(201, 26);
+            this.начатьЗановоToolStripMenuItem.Text = "Начать заново";
+            this.начатьЗановоToolStripMenuItem.Click += new System.EventHandler(this.начатьЗановоToolStripMenuItem_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -312,6 +330,8 @@
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Label start_label;
         private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.ToolStripMenuItem тестированиеToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem начатьЗановоToolStripMenuItem;
     }
 }
 
