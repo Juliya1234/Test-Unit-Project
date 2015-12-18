@@ -68,8 +68,9 @@ namespace SessionTestUnit
                 label.Font = new Font("HelveticaNeueCyr", 10.2F, 
                     FontStyle.Regular, GraphicsUnit.Point, 204);
                 label.AutoSize = false;
-                label.Height = 95;
-                label.Width = this.Width - 40;
+                label.Anchor = (AnchorStyles)(AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right);
+                label.Height = 105;
+                label.Width = label2.Width;
                 this.Controls.Add(label);
                 start_location_y += label.Height + 10;
             }

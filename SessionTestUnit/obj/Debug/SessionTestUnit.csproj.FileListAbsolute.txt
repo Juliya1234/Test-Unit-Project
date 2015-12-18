@@ -18,3 +18,5 @@ E:\GitHub\Test-Unit-Project\SessionTestUnit\obj\Debug\SessionTestUnit.Form1.reso
 E:\GitHub\Test-Unit-Project\SessionTestUnit\obj\Debug\SessionTestUnit.Properties.Resources.resources
 E:\GitHub\Test-Unit-Project\SessionTestUnit\obj\Debug\SessionTestUnit.resultForm.resources
 E:\GitHub\Test-Unit-Project\SessionTestUnit\obj\Debug\SessionTestUnit.csproj.GenerateResource.Cache
+E:\GitHub\Test-Unit-Project\SessionTestUnit\obj\Debug\SessionTestUnit.AboutBox1.resources
+E:\GitHub\Test-Unit-Project\SessionTestUnit\obj\Debug\SessionTestUnit.SettingsForm.resources

@@ -68,8 +68,16 @@ namespace SessionTestUnit
         
         public int get_count()
         {
-            
             return list.Count;
+        }
+        public void set_question_limit(int limit)
+        {
+            var temp = new List<TestQuestion>(0);
+            for (int i = 0; i < limit; i++)
+            {
+                temp.Add(list[i]);
+            }
+            list = temp;
         }
     }
 }

@@ -20,8 +20,10 @@ namespace SessionTestUnit
         private int count = 0;
         private int rigth_checked = 0;
         private bool loaded_file = false;
-        private string version = "0.1";
+        private string version = "0.2";
         private string file_name = "";
+        //-------------------------
+        private Settings settings;
         public Form1()
         {
             InitializeComponent();
@@ -31,7 +33,7 @@ namespace SessionTestUnit
         private void Form1_Shown(object sender, EventArgs e)
         {
             manager = new TestLoadManager();
-            load_settings();
+            //load_settings();
 
         }
         private void load_source_file(string filename)
@@ -39,12 +41,20 @@ namespace SessionTestUnit
             var reader = new StreamReader(filename, Encoding.Default);
             string text = reader.ReadToEnd();
             reader.Close();
+            //-----------------------------
             manager.set_source_list(text);
+            if (settings != null)
+                if (settings.questions_limit)
+                    manager.set_question_limit(25);
+            //----------------------------
             current_question = manager.get_next();
             count += 1;
             load_to_labels(current_question);
-            label1.Text = "Осталось: " + manager.get_count() +
+            if (settings.show_rigth)
+                label1.Text = "Осталось: " + manager.get_count() +
                 ". Правильно отмечено: " + rigth_checked;
+            else
+                label1.Text = "Осталось: " + manager.get_count();
 
 
         }
@@ -66,41 +76,33 @@ namespace SessionTestUnit
                 variant_3.BackColor = Color.FromArgb(248, 248, 248);
                 variant_4.BackColor = Color.FromArgb(248, 248, 248);
                 variant_5.BackColor = Color.FromArgb(248, 248, 248);
-                //-----------------
-                string text = "";
                 //--------------
-                text = hash[random.Next(hash.Count)];
-                variant_1.Text = text;
-                hash.Remove(text);
+                variant_1.Text = hash[random.Next(hash.Count)];
+                hash.Remove(variant_1.Text);
                 //------------------
-                text = hash[random.Next(hash.Count)];
-                variant_2.Text = text;
-                hash.Remove(text);
+                variant_2.Text = hash[random.Next(hash.Count)];
+                hash.Remove(variant_2.Text);
                 //---------------------------
-                text = hash[random.Next(hash.Count)];
-                variant_3.Text = text;
-                hash.Remove(text);
+                variant_3.Text = hash[random.Next(hash.Count)];
+                hash.Remove(variant_3.Text);
                 //---------------------------
-                text = hash[random.Next(hash.Count)];
-                variant_4.Text = text;
-                hash.Remove(text);
+                variant_4.Text = hash[random.Next(hash.Count)];
+                hash.Remove(variant_4.Text);
                 //---------------------------
-                text = hash[random.Next(hash.Count)];
-                variant_5.Text = text;
-                hash.Remove(text);
+                variant_5.Text = hash[random.Next(hash.Count)];
+                hash.Remove(variant_5.Text);
                 //---------------------------
             }
         }
 
         private void load_settings()
         {
-            //var reader = new StreamReader("questions.txt", Encoding.Default);
-            //string text = reader.ReadToEnd();
-            //reader.Close();
+            settings = new SettingsManager().Load();
             count = 0;
             rigth_checked = 0;
             answered = new List<AnsweredQuestion>(0);
-            //load_source_file(text);
+            if (file_name != "")
+                load_source_file(file_name);
 
         }
 
@@ -115,19 +117,12 @@ namespace SessionTestUnit
 
             if (openFileDialog1.ShowDialog() == DialogResult.OK)
             {
-                try
-                {
-                    load_source_file(openFileDialog1.FileName);
-                    label2.Text = "Файл загружен. Нажмите \"Начать\"";
-                    loaded_file = true;
-                    file_name = openFileDialog1.FileName;
-                }
-                catch (Exception ex)
-                {
-                    MessageBox.Show("Error: Could not read file from disk. Original error: " + ex.Message);
-                }
+                 //load_source_file(openFileDialog1.FileName);
+                 file_name = openFileDialog1.FileName;
+                 load_settings();
+                 label2.Text = "Файл загружен. Нажмите \"Начать\"";
+                 loaded_file = true;
             }
-            load_settings();
             
         }
 
@@ -143,6 +138,13 @@ namespace SessionTestUnit
             button1.Enabled = true;
             
         }
+        private void paint_radiobutton(RadioButton sender, bool rigth)
+        {
+            if (rigth)
+                sender.BackColor = Color.FromArgb(153, 230, 153);
+            else 
+                sender.BackColor = Color.FromArgb(255, 128, 128);
+        }
         private void check_question()
         {
             var answer = new AnsweredQuestion();
@@ -154,23 +156,23 @@ namespace SessionTestUnit
             {
                 if (variant_1.Text == current_question.variant_1)
                 {
-                    variant_1.BackColor = Color.FromArgb(153, 230, 153);
                     rigth_checked += 1;
+                    paint_radiobutton(variant_1, true);
                  }
                  else
-                    variant_1.BackColor = Color.FromArgb(255, 128, 128);
-                 answer.was_choose = variant_1.Text;
+                    paint_radiobutton(variant_1, false);
+                answer.was_choose = variant_1.Text;
             }
             //-----------------------------
             if (variant_2.Checked)
             { 
                 if (variant_2.Text == current_question.variant_1)
                 {
-                    variant_2.BackColor = Color.FromArgb(153, 230, 153);
+                    paint_radiobutton(variant_2, true);
                     rigth_checked += 1;
                 }
                 else
-                    variant_2.BackColor = Color.FromArgb(255, 128, 128);
+                    paint_radiobutton(variant_2, false);
                 answer.was_choose = variant_2.Text;
             }
             //----------------------------
@@ -178,11 +180,11 @@ namespace SessionTestUnit
             {
                 if (variant_3.Text == current_question.variant_1)
                 {
-                    variant_3.BackColor = Color.FromArgb(153, 230, 153);
+                    paint_radiobutton(variant_3, true);
                     rigth_checked += 1;
                 }
                 else
-                    variant_3.BackColor = Color.FromArgb(255, 128, 128);
+                    paint_radiobutton(variant_3, false);
                 answer.was_choose = variant_3.Text;
             }
             //---------------------
@@ -190,11 +192,11 @@ namespace SessionTestUnit
             {
                 if (variant_4.Text == current_question.variant_1)
                 {
-                    variant_4.BackColor = Color.FromArgb(153, 230, 153);
+                    paint_radiobutton(variant_4, true);
                     rigth_checked += 1;
                 }
                 else
-                    variant_4.BackColor = Color.FromArgb(255, 128, 128);
+                    paint_radiobutton(variant_4, false);
                 answer.was_choose = variant_4.Text;
             }
             //----------------------
@@ -202,11 +204,11 @@ namespace SessionTestUnit
             {
                 if (variant_5.Text == current_question.variant_1)
                 {
-                    variant_5.BackColor = Color.FromArgb(153, 230, 153);
+                    paint_radiobutton(variant_5, true);
                     rigth_checked += 1;
                 }
                 else
-                    variant_5.BackColor = Color.FromArgb(255, 128, 128);
+                    paint_radiobutton(variant_5, false);
                 answer.was_choose = variant_5.Text;
             }
             //----------------------------------
@@ -217,19 +219,19 @@ namespace SessionTestUnit
         private void show_rigth()
         {
             if (variant_1.Text == current_question.variant_1)
-                variant_1.BackColor = Color.FromArgb(153, 230, 153);
+                paint_radiobutton(variant_1, true);
 
             if (variant_2.Text == current_question.variant_1)
-                variant_2.BackColor = Color.FromArgb(153, 230, 153);
+                paint_radiobutton(variant_2, true);
 
             if (variant_3.Text == current_question.variant_1)
-                variant_3.BackColor = Color.FromArgb(153, 230, 153);
+                paint_radiobutton(variant_3, true);
 
             if (variant_4.Text == current_question.variant_1)
-                variant_4.BackColor = Color.FromArgb(153, 230, 153);
+                paint_radiobutton(variant_4, true);
 
             if (variant_5.Text == current_question.variant_1)
-                variant_5.BackColor = Color.FromArgb(153, 230, 153);
+                paint_radiobutton(variant_5, true);
 
 
         }
@@ -243,7 +245,7 @@ namespace SessionTestUnit
 
         private void Form1_Load(object sender, EventArgs e)
         {
-
+            start_panel.Location = new Point(12, 40);
         }
 
         private void button2_Click(object sender, EventArgs e)
@@ -265,9 +267,24 @@ namespace SessionTestUnit
             if (file_name != "")
             {
                 label1.Text = "";
-                load_source_file(file_name);
                 load_settings();
+                
             }
+        }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+            new SettingsForm().Show();
+        }
+
+        private void пулВопросовToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            new SettingsForm().Show();
+        }
+
+        private void оПрограммеToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            new AboutBox1().Show();
         }
     }
 }

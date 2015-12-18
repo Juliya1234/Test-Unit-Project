@@ -5,8 +5,8 @@ using System.Runtime.InteropServices;
 // Управление общими сведениями о сборке осуществляется с помощью 
 // набора атрибутов. Измените значения этих атрибутов, чтобы изменить сведения,
 // связанные со сборкой.
-[assembly: AssemblyTitle("Test Unit")]
-[assembly: AssemblyDescription("")]
+[assembly: AssemblyTitle("Platonus test unit")]
+[assembly: AssemblyDescription("Программа для проведения пробного тестирования в формате системы Platonus в домашних условиях.")]
 [assembly: AssemblyConfiguration("")]
 [assembly: AssemblyCompany("ake111aa")]
 [assembly: AssemblyProduct("Turan Test unit")]
