@@ -69,12 +69,13 @@ namespace SessionTestUnit
         private void create_labels(List<AnsweredQuestion> hash)
         {
             int start_location_y = label2.Location.Y + label2.Height + 10;
+            int count = 1;
             foreach(AnsweredQuestion q in hash)
             {
                 var label = new Label();
                 if (q.rigth == q.was_choose)
                 {
-                    label.Text = "Вопрос №" + q.pos +
+                    label.Text = "Вопрос №" + count +
                              "\r\nВопрос: " + q.question +
                              "\r\nПравильный ответ: " + q.rigth +
                              "\r\nОтвечен верно";
@@ -82,7 +83,7 @@ namespace SessionTestUnit
                 }
                 else
                 {
-                    label.Text = "Вопрос №" + q.pos +
+                    label.Text = "Вопрос №" + count +
                              "\r\nВопрос: " + q.question +
                              "\r\nПравильный ответ: " + q.rigth +
                              "\r\nОтвет пользователя: " + q.was_choose;
@@ -93,10 +94,11 @@ namespace SessionTestUnit
                     FontStyle.Regular, GraphicsUnit.Point, 204);
                 label.AutoSize = false;
                 label.Anchor = (AnchorStyles)(AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right);
-                label.Height = 105;
+                label.Height = 115;
                 label.Width = label2.Width;
                 this.Controls.Add(label);
                 start_location_y += label.Height + 10;
+                count += 1;
             }
         }
     }

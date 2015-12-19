@@ -57,7 +57,7 @@ namespace SessionTestUnit
         {
             if (test != null)
             {
-                question_label.Text = count + ") " +  test.question;
+                question_label.Text = test.question;
                 var random = new Random();
                 var hash = new List<string>(0);
                 hash.Add(test.variant_1);
@@ -134,8 +134,7 @@ namespace SessionTestUnit
                 current_question = manager.get_next();
                 load_to_labels(current_question);
                 //label1.Text = "Вопрос " + count + " из " + manager.get_count();
-                label1.Text = "Осталось: " + manager.get_count() +
-                    ". Правильно отмечено: " + rigth_checked;
+                label1.Text = "Осталось: " + manager.get_count();
                 button1.Enabled = true;
                 if (answered.Count == manager.get_first_list_count())
                     button3.Text = "Показать результат";
@@ -153,7 +152,6 @@ namespace SessionTestUnit
             var answer = new AnsweredQuestion();
             answer.question = current_question.question;
             answer.rigth = current_question.variant_1;
-            answer.pos = count;
             //------------------------
             if (variant_1.Checked)
             {
@@ -238,7 +236,7 @@ namespace SessionTestUnit
 
         private void Form1_Load(object sender, EventArgs e)
         {
-            start_panel.Location = new Point(12, 40);
+            start_panel.Dock = DockStyle.Fill;
             label3.Text = "Версия: " + Assembly.GetExecutingAssembly().GetName().Version.ToString(); ;
         }
 
