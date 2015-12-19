@@ -10,6 +10,7 @@ namespace SessionTestUnit
     public class TestLoadManager
     {
         private List<TestQuestion> list;
+        private int first_list_count;
         public TestLoadManager()
         {
             list = new List<TestQuestion>(0);
@@ -51,7 +52,8 @@ namespace SessionTestUnit
                 list.Add(question);
                 if (end_pos > -1)
                     text = text.Substring(end_pos);
-            }           
+            }
+            first_list_count = list.Count;           
         }
 
         public TestQuestion get_next()
@@ -70,14 +72,23 @@ namespace SessionTestUnit
         {
             return list.Count;
         }
+        public int get_first_list_count()
+        {
+            return first_list_count;
+        }
         public void set_question_limit(int limit)
         {
-            var temp = new List<TestQuestion>(0);
-            for (int i = 0; i < limit; i++)
+            if (limit <= list.Count)
             {
-                temp.Add(list[i]);
+                var temp = new List<TestQuestion>(0);
+                for (int i = 0; i < limit; i++)
+                {
+                    temp.Add(list[i]);
+                }
+                list = temp;
+                first_list_count = list.Count;
             }
-            list = temp;
+
         }
     }
 }

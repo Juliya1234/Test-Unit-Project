@@ -41,16 +41,17 @@
             this.загрузитьToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.тестированиеToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.начатьЗановоToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.пулВопросовToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.оПрограммеToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.label1 = new System.Windows.Forms.Label();
             this.button1 = new System.Windows.Forms.Button();
             this.question_panel = new System.Windows.Forms.Panel();
+            this.label3 = new System.Windows.Forms.Label();
             this.start_panel = new System.Windows.Forms.Panel();
+            this.button4 = new System.Windows.Forms.Button();
             this.label2 = new System.Windows.Forms.Label();
             this.button2 = new System.Windows.Forms.Button();
             this.start_label = new System.Windows.Forms.Label();
-            this.пулВопросовToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.button4 = new System.Windows.Forms.Button();
-            this.оПрограммеToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.question_panel.SuspendLayout();
             this.start_panel.SuspendLayout();
@@ -63,10 +64,10 @@
             this.question_label.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(248)))), ((int)(((byte)(248)))));
             this.question_label.Font = new System.Drawing.Font("HelveticaNeueCyr", 13.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.question_label.ForeColor = System.Drawing.Color.Black;
-            this.question_label.Location = new System.Drawing.Point(3, 66);
+            this.question_label.Location = new System.Drawing.Point(4, 38);
             this.question_label.Name = "question_label";
             this.question_label.Padding = new System.Windows.Forms.Padding(2);
-            this.question_label.Size = new System.Drawing.Size(698, 73);
+            this.question_label.Size = new System.Drawing.Size(698, 91);
             this.question_label.TabIndex = 0;
             this.question_label.Text = "question_label";
             // 
@@ -80,7 +81,7 @@
             this.variant_5.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(248)))), ((int)(((byte)(248)))));
             this.variant_5.Font = new System.Drawing.Font("HelveticaNeueCyr", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.variant_5.ForeColor = System.Drawing.Color.Black;
-            this.variant_5.Location = new System.Drawing.Point(17, 410);
+            this.variant_5.Location = new System.Drawing.Point(17, 400);
             this.variant_5.Name = "variant_5";
             this.variant_5.Padding = new System.Windows.Forms.Padding(2);
             this.variant_5.Size = new System.Drawing.Size(684, 61);
@@ -98,7 +99,7 @@
             this.variant_4.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(248)))), ((int)(((byte)(248)))));
             this.variant_4.Font = new System.Drawing.Font("HelveticaNeueCyr", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.variant_4.ForeColor = System.Drawing.Color.Black;
-            this.variant_4.Location = new System.Drawing.Point(17, 343);
+            this.variant_4.Location = new System.Drawing.Point(17, 333);
             this.variant_4.Name = "variant_4";
             this.variant_4.Padding = new System.Windows.Forms.Padding(2);
             this.variant_4.Size = new System.Drawing.Size(684, 61);
@@ -116,7 +117,7 @@
             this.variant_3.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(248)))), ((int)(((byte)(248)))));
             this.variant_3.Font = new System.Drawing.Font("HelveticaNeueCyr", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.variant_3.ForeColor = System.Drawing.Color.Black;
-            this.variant_3.Location = new System.Drawing.Point(17, 276);
+            this.variant_3.Location = new System.Drawing.Point(17, 266);
             this.variant_3.Name = "variant_3";
             this.variant_3.Padding = new System.Windows.Forms.Padding(2);
             this.variant_3.Size = new System.Drawing.Size(684, 61);
@@ -134,7 +135,7 @@
             this.variant_2.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(248)))), ((int)(((byte)(248)))));
             this.variant_2.Font = new System.Drawing.Font("HelveticaNeueCyr", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.variant_2.ForeColor = System.Drawing.Color.Black;
-            this.variant_2.Location = new System.Drawing.Point(17, 209);
+            this.variant_2.Location = new System.Drawing.Point(17, 199);
             this.variant_2.Name = "variant_2";
             this.variant_2.Padding = new System.Windows.Forms.Padding(2);
             this.variant_2.Size = new System.Drawing.Size(684, 61);
@@ -152,7 +153,7 @@
             this.variant_1.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(248)))), ((int)(((byte)(248)))));
             this.variant_1.Font = new System.Drawing.Font("HelveticaNeueCyr", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.variant_1.ForeColor = System.Drawing.Color.Black;
-            this.variant_1.Location = new System.Drawing.Point(17, 142);
+            this.variant_1.Location = new System.Drawing.Point(17, 132);
             this.variant_1.Name = "variant_1";
             this.variant_1.Padding = new System.Windows.Forms.Padding(2);
             this.variant_1.Size = new System.Drawing.Size(684, 61);
@@ -195,7 +196,7 @@
             // загрузитьToolStripMenuItem
             // 
             this.загрузитьToolStripMenuItem.Name = "загрузитьToolStripMenuItem";
-            this.загрузитьToolStripMenuItem.Size = new System.Drawing.Size(181, 26);
+            this.загрузитьToolStripMenuItem.Size = new System.Drawing.Size(165, 26);
             this.загрузитьToolStripMenuItem.Text = "Загрузить";
             this.загрузитьToolStripMenuItem.Click += new System.EventHandler(this.загрузитьToolStripMenuItem_Click);
             // 
@@ -215,11 +216,25 @@
             this.начатьЗановоToolStripMenuItem.Text = "Начать заново";
             this.начатьЗановоToolStripMenuItem.Click += new System.EventHandler(this.начатьЗановоToolStripMenuItem_Click);
             // 
+            // пулВопросовToolStripMenuItem
+            // 
+            this.пулВопросовToolStripMenuItem.Name = "пулВопросовToolStripMenuItem";
+            this.пулВопросовToolStripMenuItem.Size = new System.Drawing.Size(201, 26);
+            this.пулВопросовToolStripMenuItem.Text = "Настройки";
+            this.пулВопросовToolStripMenuItem.Click += new System.EventHandler(this.пулВопросовToolStripMenuItem_Click);
+            // 
+            // оПрограммеToolStripMenuItem
+            // 
+            this.оПрограммеToolStripMenuItem.Name = "оПрограммеToolStripMenuItem";
+            this.оПрограммеToolStripMenuItem.Size = new System.Drawing.Size(127, 23);
+            this.оПрограммеToolStripMenuItem.Text = "О программе";
+            this.оПрограммеToolStripMenuItem.Click += new System.EventHandler(this.оПрограммеToolStripMenuItem_Click);
+            // 
             // label1
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("HelveticaNeueCyr", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label1.Location = new System.Drawing.Point(4, 38);
+            this.label1.Location = new System.Drawing.Point(289, 3);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(54, 19);
             this.label1.TabIndex = 10;
@@ -240,6 +255,7 @@
             this.question_panel.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
+            this.question_panel.Controls.Add(this.label3);
             this.question_panel.Controls.Add(this.question_label);
             this.question_panel.Controls.Add(this.button1);
             this.question_panel.Controls.Add(this.variant_1);
@@ -253,6 +269,16 @@
             this.question_panel.Name = "question_panel";
             this.question_panel.Size = new System.Drawing.Size(719, 493);
             this.question_panel.TabIndex = 12;
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("HelveticaNeueCyr", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label3.Location = new System.Drawing.Point(570, 464);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(46, 16);
+            this.label3.TabIndex = 12;
+            this.label3.Text = "label3";
             // 
             // start_panel
             // 
@@ -268,6 +294,17 @@
             this.start_panel.Size = new System.Drawing.Size(719, 493);
             this.start_panel.TabIndex = 12;
             this.start_panel.Paint += new System.Windows.Forms.PaintEventHandler(this.start_panel_Paint);
+            // 
+            // button4
+            // 
+            this.button4.Font = new System.Drawing.Font("HelveticaNeueCyr", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.button4.Location = new System.Drawing.Point(430, 435);
+            this.button4.Name = "button4";
+            this.button4.Size = new System.Drawing.Size(283, 34);
+            this.button4.TabIndex = 3;
+            this.button4.Text = "Настройки программы";
+            this.button4.UseVisualStyleBackColor = true;
+            this.button4.Click += new System.EventHandler(this.button4_Click);
             // 
             // label2
             // 
@@ -299,31 +336,6 @@
             this.start_label.Size = new System.Drawing.Size(710, 285);
             this.start_label.TabIndex = 0;
             this.start_label.Text = resources.GetString("start_label.Text");
-            // 
-            // пулВопросовToolStripMenuItem
-            // 
-            this.пулВопросовToolStripMenuItem.Name = "пулВопросовToolStripMenuItem";
-            this.пулВопросовToolStripMenuItem.Size = new System.Drawing.Size(201, 26);
-            this.пулВопросовToolStripMenuItem.Text = "Настройки";
-            this.пулВопросовToolStripMenuItem.Click += new System.EventHandler(this.пулВопросовToolStripMenuItem_Click);
-            // 
-            // button4
-            // 
-            this.button4.Font = new System.Drawing.Font("HelveticaNeueCyr", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.button4.Location = new System.Drawing.Point(430, 435);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(283, 34);
-            this.button4.TabIndex = 3;
-            this.button4.Text = "Настройки программы";
-            this.button4.UseVisualStyleBackColor = true;
-            this.button4.Click += new System.EventHandler(this.button4_Click);
-            // 
-            // оПрограммеToolStripMenuItem
-            // 
-            this.оПрограммеToolStripMenuItem.Name = "оПрограммеToolStripMenuItem";
-            this.оПрограммеToolStripMenuItem.Size = new System.Drawing.Size(127, 23);
-            this.оПрограммеToolStripMenuItem.Text = "О программе";
-            this.оПрограммеToolStripMenuItem.Click += new System.EventHandler(this.оПрограммеToolStripMenuItem_Click);
             // 
             // Form1
             // 
@@ -377,6 +389,7 @@
         private System.Windows.Forms.ToolStripMenuItem пулВопросовToolStripMenuItem;
         private System.Windows.Forms.Button button4;
         private System.Windows.Forms.ToolStripMenuItem оПрограммеToolStripMenuItem;
+        private System.Windows.Forms.Label label3;
     }
 }
 

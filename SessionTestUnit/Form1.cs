@@ -5,6 +5,7 @@ using System.Data;
 using System.Drawing;
 using System.IO;
 using System.Linq;
+using System.Reflection;
 using System.Text;
 using System.Threading;
 using System.Threading.Tasks;
@@ -20,14 +21,13 @@ namespace SessionTestUnit
         private int count = 0;
         private int rigth_checked = 0;
         private bool loaded_file = false;
-        private string version = "0.2";
         private string file_name = "";
         //-------------------------
         private Settings settings;
         public Form1()
         {
             InitializeComponent();
-            this.Text = "Turan test unit version " + version;
+            this.Text = "Тестировщик Platonus";
         }
 
         private void Form1_Shown(object sender, EventArgs e)
@@ -50,11 +50,7 @@ namespace SessionTestUnit
             current_question = manager.get_next();
             count += 1;
             load_to_labels(current_question);
-            if (settings.show_rigth)
-                label1.Text = "Осталось: " + manager.get_count() +
-                ". Правильно отмечено: " + rigth_checked;
-            else
-                label1.Text = "Осталось: " + manager.get_count();
+            label1.Text = "Осталось: " + manager.get_count();
 
 
         }
@@ -128,15 +124,22 @@ namespace SessionTestUnit
 
         private void button3_Click(object sender, EventArgs e)
         {
-            if (manager.get_count() == 0)
-                new resultForm(count, rigth_checked, answered).Show();
-            count += 1;
-            current_question = manager.get_next();
-            load_to_labels(current_question);
-            label1.Text = "Осталось: " + manager.get_count() + 
-                ". Правильно отмечено: " + rigth_checked;
-            button1.Enabled = true;
-            
+            if (answered.Count == manager.get_first_list_count())
+            {
+                new resultForm(rigth_checked, answered).Show();
+            }
+            else
+            {
+                check_question();
+                current_question = manager.get_next();
+                load_to_labels(current_question);
+                //label1.Text = "Вопрос " + count + " из " + manager.get_count();
+                label1.Text = "Осталось: " + manager.get_count() +
+                    ". Правильно отмечено: " + rigth_checked;
+                button1.Enabled = true;
+                if (answered.Count == manager.get_first_list_count())
+                    button3.Text = "Показать результат";
+            }
         }
         private void paint_radiobutton(RadioButton sender, bool rigth)
         {
@@ -155,64 +158,39 @@ namespace SessionTestUnit
             if (variant_1.Checked)
             {
                 if (variant_1.Text == current_question.variant_1)
-                {
                     rigth_checked += 1;
-                    paint_radiobutton(variant_1, true);
-                 }
-                 else
-                    paint_radiobutton(variant_1, false);
                 answer.was_choose = variant_1.Text;
             }
             //-----------------------------
             if (variant_2.Checked)
-            { 
+            {
                 if (variant_2.Text == current_question.variant_1)
-                {
-                    paint_radiobutton(variant_2, true);
                     rigth_checked += 1;
-                }
-                else
-                    paint_radiobutton(variant_2, false);
                 answer.was_choose = variant_2.Text;
             }
             //----------------------------
             if (variant_3.Checked)
             {
                 if (variant_3.Text == current_question.variant_1)
-                {
-                    paint_radiobutton(variant_3, true);
                     rigth_checked += 1;
-                }
-                else
-                    paint_radiobutton(variant_3, false);
                 answer.was_choose = variant_3.Text;
             }
             //---------------------
             if (variant_4.Checked)
             {
                 if (variant_4.Text == current_question.variant_1)
-                {
-                    paint_radiobutton(variant_4, true);
                     rigth_checked += 1;
-                }
-                else
-                    paint_radiobutton(variant_4, false);
                 answer.was_choose = variant_4.Text;
             }
             //----------------------
             if (variant_5.Checked)
             {
                 if (variant_5.Text == current_question.variant_1)
-                {
-                    paint_radiobutton(variant_5, true);
                     rigth_checked += 1;
-                }
-                else
-                    paint_radiobutton(variant_5, false);
                 answer.was_choose = variant_5.Text;
             }
             //----------------------------------
-            show_rigth();
+            
             answered.Add(answer);
 
         }
@@ -220,18 +198,33 @@ namespace SessionTestUnit
         {
             if (variant_1.Text == current_question.variant_1)
                 paint_radiobutton(variant_1, true);
+            else
+               if (variant_1.Checked)
+                paint_radiobutton(variant_1, false);
 
             if (variant_2.Text == current_question.variant_1)
                 paint_radiobutton(variant_2, true);
+            else
+               if (variant_2.Checked)
+                paint_radiobutton(variant_2, false);
 
             if (variant_3.Text == current_question.variant_1)
+                paint_radiobutton(variant_3, false);
+            else
+               if (variant_3.Checked)
                 paint_radiobutton(variant_3, true);
 
             if (variant_4.Text == current_question.variant_1)
+                paint_radiobutton(variant_4, false);
+            else
+               if (variant_4.Checked)
                 paint_radiobutton(variant_4, true);
 
             if (variant_5.Text == current_question.variant_1)
-                paint_radiobutton(variant_5, true);
+                paint_radiobutton(variant_5, false);
+            else
+               if (variant_5.Checked)
+                paint_radiobutton(variant_5, false);
 
 
         }
@@ -239,13 +232,14 @@ namespace SessionTestUnit
         private void button1_Click(object sender, EventArgs e)
         {
             if (current_question != null)
-                check_question();
+                show_rigth();
             button1.Enabled = false;
         }
 
         private void Form1_Load(object sender, EventArgs e)
         {
             start_panel.Location = new Point(12, 40);
+            label3.Text = "Версия: " + Assembly.GetExecutingAssembly().GetName().Version.ToString(); ;
         }
 
         private void button2_Click(object sender, EventArgs e)

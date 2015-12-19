@@ -21,14 +21,14 @@ namespace SessionTestUnit
         {
             var settings = new SettingsManager().Load();
             checkBox2.Checked = settings.questions_limit;
-            checkBox1.Checked = settings.show_rigth;
+            checkBox1.Checked = settings.show_swearing;
         }
 
         private void button1_Click(object sender, EventArgs e)
         {
             var settings = new Settings();
             settings.questions_limit    = checkBox2.Checked;
-            settings.show_rigth         = checkBox1.Checked;
+            settings.show_swearing         = checkBox1.Checked;
             new SettingsManager().SaveSettings(settings);
             this.Close();
         }

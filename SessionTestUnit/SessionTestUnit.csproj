@@ -35,6 +35,9 @@
   <PropertyGroup>
     <ApplicationIcon>social_twitter_button_blue_icon.ico</ApplicationIcon>
   </PropertyGroup>
+  <PropertyGroup>
+    <NoWin32Manifest>true</NoWin32Manifest>
+  </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />
     <Reference Include="System.Core" />

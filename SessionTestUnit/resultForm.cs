@@ -15,22 +15,34 @@ namespace SessionTestUnit
         private int count;
         private int rigth;
         private List<AnsweredQuestion> hash;
-        public resultForm(int count, int rigth, List<AnsweredQuestion> hash)
+        public resultForm(int rigth, List<AnsweredQuestion> hash)
         {
             InitializeComponent();
-            this.count = count;
             this.rigth = rigth;
             this.hash = hash;
         }
 
         private void resultForm_Load(object sender, EventArgs e)
         {
-            double result = (double)rigth / count;
-            result = result * 100;
-            label2.Text = result.ToString("#.##") + "%\r\n" + get_swearing(result);
+            if (rigth > 0)
+            {
+                double result = (double)rigth / hash.Count;
+                result = result * 100;
+                label2.Text = result.ToString("#.##") + "%\r\n" + get_words(result);
+            }
+            else
+                label2.Text = "0 %\r\n" + get_words(0);
             create_labels(hash);
         }
-        private string get_swearing(double res)
+        private string get_words(double res)
+        {
+            var settings = new SettingsManager().Load();
+            if (settings.show_swearing)
+                return get_swearing(res);
+            else
+                return get_good_words(res);
+        }
+        private string get_good_words(double res)
         {
             if (res >= 90)
                 return "Круто";
@@ -40,7 +52,19 @@ namespace SessionTestUnit
                 return "Ну ничего, в другой раз повезет";
             if ((res >= 50) && (res < 60))
                 return "Неудачный день?";
-            return "Это провал";
+            return "Ну как же так? Это ведь легкий тест";
+        }
+        private string get_swearing(double res)
+        {
+            if (res >= 90)
+                return "Долбанный очкарик";
+            if ((res >= 75) && (res < 90))
+                return "Даже твоя жирная мамаша может лучше";
+            if ((res >= 60) && (res < 75))
+                return "Ты что, в доту переиграл? \r\nДаже рак на миде лучше тащит";
+            if ((res >= 50) && (res < 60))
+                return "Ну просто я не знаю. \r\nПопробуй обследоваться на предмет аутизма";
+            return "Да люди с синдромом Дауна лучше пишут тесты";
         }
         private void create_labels(List<AnsweredQuestion> hash)
         {
