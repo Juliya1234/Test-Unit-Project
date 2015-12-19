@@ -13,7 +13,7 @@ namespace SessionTestUnit
         public Settings()
         {
             questions_limit = false;
-            show_swearing = true;
+            show_swearing = false;
         }
     }
 }
