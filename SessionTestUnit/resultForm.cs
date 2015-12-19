@@ -15,6 +15,11 @@ namespace SessionTestUnit
         private int count;
         private int rigth;
         private List<AnsweredQuestion> hash;
+        private List<string> swear_100;
+        private List<string> swear_99_90;
+        private List<string> swear_89_75;
+        private List<string> swear_74_50;
+        private List<string> swear_49;
         public resultForm(int rigth, List<AnsweredQuestion> hash)
         {
             InitializeComponent();
@@ -24,6 +29,7 @@ namespace SessionTestUnit
 
         private void resultForm_Load(object sender, EventArgs e)
         {
+            initiate_swears();
             if (rigth > 0)
             {
                 double result = (double)rigth / hash.Count;
@@ -33,7 +39,8 @@ namespace SessionTestUnit
             else
                 label2.Text = "0 %\r\n" + get_words(0);
             create_labels(hash);
-        }
+            //----------------------------------------
+    }
         private string get_words(double res)
         {
             var settings = new SettingsManager().Load();
@@ -44,8 +51,10 @@ namespace SessionTestUnit
         }
         private string get_good_words(double res)
         {
-            if (res >= 90)
-                return "Круто";
+            if (res == 100)
+                return "Молодец! Так держать! Эта сессия - ничто для тебя!";
+            if ((res >= 90) && (res < 100))
+                return "Круто! Еще немного подготовки - и стольник тебе обеспечен!";
             if ((res >= 75) && (res < 90))
                 return "Я знаю, ты можешь лучше";
             if ((res >= 60) && (res < 75))
@@ -56,15 +65,15 @@ namespace SessionTestUnit
         }
         private string get_swearing(double res)
         {
-            if (res >= 90)
-                return "Долбанный очкарик";
+            if (res == 100)
+                return swear_100[new Random().Next(swear_100.Count)];
+            if ((res >= 90) && (res < 100))
+                return swear_99_90[new Random().Next(swear_99_90.Count)];
             if ((res >= 75) && (res < 90))
-                return "Даже твоя жирная мамаша может лучше";
-            if ((res >= 60) && (res < 75))
-                return "Ты что, в доту переиграл? \r\nДаже рак на миде лучше тащит";
-            if ((res >= 50) && (res < 60))
-                return "Ну просто я не знаю. \r\nПопробуй обследоваться на предмет аутизма";
-            return "Да люди с синдромом Дауна лучше пишут тесты";
+                return swear_89_75[new Random().Next(swear_89_75.Count)];
+            if ((res >= 50) && (res < 75))
+                return swear_74_50[new Random().Next(swear_74_50.Count)];
+            return swear_49[new Random().Next(swear_49.Count)];
         }
         private void create_labels(List<AnsweredQuestion> hash)
         {
@@ -100,6 +109,43 @@ namespace SessionTestUnit
                 start_location_y += label.Height + 10;
                 count += 1;
             }
+        }
+        private void initiate_swears()
+        {
+            swear_100 = new List<string>(0);
+            swear_100.Add("Возьми с полки пирожок, долбанный очкарик");
+            swear_100.Add("Тебе мозги не жмут черепушку?");
+            swear_100.Add("Батя - повелитель белого трона, маманя смотрит Рен-ТВ. И в кого ты такой умный...");
+            swear_100.Add("В церковь сходи, бес в тебе сидит, от лукавого это все");
+            swear_100.Add("Ублюдок, мать твою! А ну иди сюда, говно собачье! А? Сдуру решил на стольник написать?");
+            //---------------------------------
+            swear_99_90 = new List<string>(0);
+            swear_99_90.Add("Если такой головастый, то что на стольник не пишешь?");
+            swear_99_90.Add("У тебя личная жизнь то есть, законченный ботаник?");
+            swear_99_90.Add("Тут должна была быть запись о том, что ты молодец, но ты будешь послан этой программой!");
+            swear_99_90.Add("Ну ничего страшного! Ты ж не даун на стольники писать.");
+            swear_99_90.Add("Опять не 100? Ты в который раз уже пишешь тест, а все так и не научился ничему");
+            //---------------------------------
+            swear_89_75 = new List<string>(0);
+            swear_89_75.Add("Даже твоя толстая мамаша может лучше");
+            swear_89_75.Add("Серьезно? Почему ты не делаешь на 5? Система тестирования легкая ведь!");
+            swear_89_75.Add("Ты разве не в курсе, что этот тест расчитан на второй класс?");
+            swear_89_75.Add("Ты пишешь тесты, как маленькая девочка");
+            swear_89_75.Add("Люк - сын Вейдара, а ты - соседа по лестничной площадке");
+            //---------------------------------
+            swear_74_50 = new List<string>(0);
+            swear_74_50.Add("Ну и что тут такого? Да любой бомжара может написать тест лучше тебя");
+            swear_89_75.Add("Твои родители умные люди, раз заставляют тебя учиться в универе. А ты... Ты, наверное, приемный.");
+            swear_74_50.Add("Утешай себя, что и Эйнштейн учился на двойки");
+            swear_74_50.Add("Помни, что это - последняя грань. Дальше только аутизм");
+            swear_74_50.Add("Ты понимаешь, что это начало конца?");
+            //--------------------------------
+            swear_49 = new List<string>(0);
+            swear_49.Add("У меня нет слов.. Это просто невозможно");
+            swear_49.Add("Знаешь, я как раз искал недоразвитых для социальной рекламы...");
+            swear_49.Add("Эту надпись видят только аутисты, которые не могут даже в проходной");
+            swear_49.Add("Если бы твой мозг стал планетой, то ее бы не было");
+            swear_49.Add("Зачем тебе учеба? Лучше мемасики в интернетике погляди да картиночки полайкай");
         }
     }
 }
