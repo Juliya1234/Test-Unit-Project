@@ -181,7 +181,7 @@
             this.оПрограммеToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(747, 27);
+            this.menuStrip1.Size = new System.Drawing.Size(747, 28);
             this.menuStrip1.TabIndex = 9;
             this.menuStrip1.Text = "menuStrip1";
             // 
@@ -206,7 +206,7 @@
             this.начатьЗановоToolStripMenuItem,
             this.пулВопросовToolStripMenuItem});
             this.тестированиеToolStripMenuItem.Name = "тестированиеToolStripMenuItem";
-            this.тестированиеToolStripMenuItem.Size = new System.Drawing.Size(131, 23);
+            this.тестированиеToolStripMenuItem.Size = new System.Drawing.Size(131, 24);
             this.тестированиеToolStripMenuItem.Text = "Тестирование";
             // 
             // начатьЗановоToolStripMenuItem

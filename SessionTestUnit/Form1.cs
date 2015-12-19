@@ -33,7 +33,6 @@ namespace SessionTestUnit
         private void Form1_Shown(object sender, EventArgs e)
         {
             manager = new TestLoadManager();
-            //load_settings();
 
         }
         private void load_source_file(string filename)
@@ -99,6 +98,7 @@ namespace SessionTestUnit
             answered = new List<AnsweredQuestion>(0);
             if (file_name != "")
                 load_source_file(file_name);
+            button3.Text = "Следующий вопрос";
 
         }
 
@@ -209,19 +209,19 @@ namespace SessionTestUnit
                 paint_radiobutton(variant_2, false);
 
             if (variant_3.Text == current_question.variant_1)
-                paint_radiobutton(variant_3, false);
+                paint_radiobutton(variant_3, true);
             else
                if (variant_3.Checked)
-                paint_radiobutton(variant_3, true);
+                paint_radiobutton(variant_3, false);
 
             if (variant_4.Text == current_question.variant_1)
-                paint_radiobutton(variant_4, false);
+                paint_radiobutton(variant_4, true);
             else
                if (variant_4.Checked)
-                paint_radiobutton(variant_4, true);
+                paint_radiobutton(variant_4, false);
 
             if (variant_5.Text == current_question.variant_1)
-                paint_radiobutton(variant_5, false);
+                paint_radiobutton(variant_5, true);
             else
                if (variant_5.Checked)
                 paint_radiobutton(variant_5, false);
