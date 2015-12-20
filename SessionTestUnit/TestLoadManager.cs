@@ -46,7 +46,7 @@ namespace SessionTestUnit
                         string var = sub_text.Substring(0, pos);
                         hash.Add(var);
                         sub_text = sub_text.Substring(pos + 2);
-                    } catch (Exception ex)
+                    } catch (Exception)
                     {
                         //MessageBox.Show("Проблема в обработке вопроса: \r\n" + quest);
                     }

@@ -12,7 +12,6 @@ namespace SessionTestUnit
 {
     public partial class resultForm : Form
     {
-        private int count;
         private int rigth;
         private List<AnsweredQuestion> hash;
         private List<string> swear_100;
