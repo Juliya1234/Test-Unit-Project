@@ -52,6 +52,9 @@
             this.label2 = new System.Windows.Forms.Label();
             this.button2 = new System.Windows.Forms.Button();
             this.start_label = new System.Windows.Forms.Label();
+            this.label4 = new System.Windows.Forms.Label();
+            this.label5 = new System.Windows.Forms.Label();
+            this.label6 = new System.Windows.Forms.Label();
             this.menuStrip1.SuspendLayout();
             this.question_panel.SuspendLayout();
             this.start_panel.SuspendLayout();
@@ -181,7 +184,7 @@
             this.оПрограммеToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(747, 28);
+            this.menuStrip1.Size = new System.Drawing.Size(747, 27);
             this.menuStrip1.TabIndex = 9;
             this.menuStrip1.Text = "menuStrip1";
             // 
@@ -196,7 +199,7 @@
             // загрузитьToolStripMenuItem
             // 
             this.загрузитьToolStripMenuItem.Name = "загрузитьToolStripMenuItem";
-            this.загрузитьToolStripMenuItem.Size = new System.Drawing.Size(165, 26);
+            this.загрузитьToolStripMenuItem.Size = new System.Drawing.Size(181, 26);
             this.загрузитьToolStripMenuItem.Text = "Загрузить";
             this.загрузитьToolStripMenuItem.Click += new System.EventHandler(this.загрузитьToolStripMenuItem_Click);
             // 
@@ -206,7 +209,7 @@
             this.начатьЗановоToolStripMenuItem,
             this.пулВопросовToolStripMenuItem});
             this.тестированиеToolStripMenuItem.Name = "тестированиеToolStripMenuItem";
-            this.тестированиеToolStripMenuItem.Size = new System.Drawing.Size(131, 24);
+            this.тестированиеToolStripMenuItem.Size = new System.Drawing.Size(131, 23);
             this.тестированиеToolStripMenuItem.Text = "Тестирование";
             // 
             // начатьЗановоToolStripMenuItem
@@ -255,6 +258,7 @@
             this.question_panel.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
+            this.question_panel.Controls.Add(this.label6);
             this.question_panel.Controls.Add(this.label3);
             this.question_panel.Controls.Add(this.question_label);
             this.question_panel.Controls.Add(this.button1);
@@ -285,6 +289,8 @@
             this.start_panel.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
+            this.start_panel.Controls.Add(this.label5);
+            this.start_panel.Controls.Add(this.label4);
             this.start_panel.Controls.Add(this.button4);
             this.start_panel.Controls.Add(this.label2);
             this.start_panel.Controls.Add(this.button2);
@@ -310,7 +316,7 @@
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("HelveticaNeueCyr", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label2.Location = new System.Drawing.Point(12, 286);
+            this.label2.Location = new System.Drawing.Point(8, 393);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(0, 27);
             this.label2.TabIndex = 2;
@@ -331,11 +337,41 @@
             this.start_label.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.start_label.Font = new System.Drawing.Font("HelveticaNeueCyr", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.start_label.Location = new System.Drawing.Point(3, 7);
+            this.start_label.Location = new System.Drawing.Point(9, 56);
             this.start_label.Name = "start_label";
-            this.start_label.Size = new System.Drawing.Size(710, 285);
+            this.start_label.Size = new System.Drawing.Size(710, 198);
             this.start_label.TabIndex = 0;
             this.start_label.Text = resources.GetString("start_label.Text");
+            // 
+            // label4
+            // 
+            this.label4.Font = new System.Drawing.Font("HelveticaNeueCyr", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label4.Location = new System.Drawing.Point(8, 254);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(703, 106);
+            this.label4.TabIndex = 4;
+            this.label4.Text = "В программе присутствут ругательства! Если вы не желаете их видеть, то настройте " +
+    "вывод ругательств в настройках. По умолчанию они выключены";
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Font = new System.Drawing.Font("HelveticaNeueCyr", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label5.Location = new System.Drawing.Point(8, 13);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(503, 26);
+            this.label5.TabIndex = 5;
+            this.label5.Text = "Добро пожаловать в программу тестироания";
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Font = new System.Drawing.Font("HelveticaNeueCyr", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label6.Location = new System.Drawing.Point(14, 464);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(46, 16);
+            this.label6.TabIndex = 13;
+            this.label6.Text = "label6";
             // 
             // Form1
             // 
@@ -390,6 +426,9 @@
         private System.Windows.Forms.Button button4;
         private System.Windows.Forms.ToolStripMenuItem оПрограммеToolStripMenuItem;
         private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Label label6;
     }
 }
 

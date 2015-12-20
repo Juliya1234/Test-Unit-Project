@@ -49,7 +49,9 @@ namespace SessionTestUnit
             current_question = manager.get_next();
             count += 1;
             load_to_labels(current_question);
-            label1.Text = "Осталось: " + manager.get_count();
+            label1.Text = "Осталось вопросов: " + manager.get_count();
+            if (settings.show_swearing)
+                label6.Text = "Включено отображение ругательств. Вы сами этого хотите";
 
 
         }
@@ -133,8 +135,9 @@ namespace SessionTestUnit
                 check_question();
                 current_question = manager.get_next();
                 load_to_labels(current_question);
-                //label1.Text = "Вопрос " + count + " из " + manager.get_count();
-                label1.Text = "Осталось: " + manager.get_count();
+                label1.Text = "Осталось вопросов: " + manager.get_count();
+                if (settings.show_swearing)
+                    label6.Text = "Включено отображение ругательств. Вы сами этого хотите";
                 button1.Enabled = true;
                 if (answered.Count == manager.get_first_list_count())
                     button3.Text = "Показать результат";
