@@ -52,6 +52,8 @@ namespace SessionTestUnit
             label1.Text = "Осталось вопросов: " + manager.get_count();
             if (settings.show_swearing)
                 label6.Text = "Включено отображение ругательств. Вы сами этого хотите";
+            else
+                label6.Text = "Ругательства выключены";
 
 
         }
@@ -126,6 +128,7 @@ namespace SessionTestUnit
 
         private void button3_Click(object sender, EventArgs e)
         {
+            settings = new SettingsManager().Load();
             if (answered.Count == manager.get_first_list_count())
             {
                 new resultForm(rigth_checked, answered).Show();
@@ -138,6 +141,8 @@ namespace SessionTestUnit
                 label1.Text = "Осталось вопросов: " + manager.get_count();
                 if (settings.show_swearing)
                     label6.Text = "Включено отображение ругательств. Вы сами этого хотите";
+                else
+                    label6.Text = "Ругательства выключены";
                 button1.Enabled = true;
                 if (answered.Count == manager.get_first_list_count())
                     button3.Text = "Показать результат";
