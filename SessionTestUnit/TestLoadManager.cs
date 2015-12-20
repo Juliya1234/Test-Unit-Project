@@ -32,23 +32,26 @@ namespace SessionTestUnit
                     sub_text = text.Substring(0, text.IndexOf("<question>"));
                 else 
                     sub_text = text.Substring(0, text.Length);
+
                 int var_count = (sub_text.Length - sub_text.Replace("<variant>", "").Length) / "<variant>".Length;
+
                 string quest = sub_text.Substring(0, text.IndexOf("\r\n"));
                 sub_text = sub_text.Substring(text.IndexOf("<variant>"));
                 var hash = new List<string>(0);
                 for (int j = 0; j < var_count; j++)
                 {
                     try {
-                        sub_text = sub_text.Substring(9);
+                        sub_text = sub_text.Substring(sub_text.IndexOf("<variant>") + 9);
                         int pos = sub_text.IndexOf("\r\n");
                         string var = sub_text.Substring(0, pos);
                         hash.Add(var);
                         sub_text = sub_text.Substring(pos + 2);
                     } catch (Exception ex)
                     {
-                        MessageBox.Show("Проблема в обработке вопроса: \r\n" + quest);
+                        //MessageBox.Show("Проблема в обработке вопроса: \r\n" + quest);
                     }
                 }
+                
                 if (hash.Count == 5)
                 {
                     var question = new TestQuestion();
@@ -71,6 +74,7 @@ namespace SessionTestUnit
                     question.variant_5 = "Ошибка: в вопросе всего 4 варианта ответа";
                     list.Add(question);
                 }
+                
                 if (end_pos > -1)
                     text = text.Substring(end_pos);
             }
