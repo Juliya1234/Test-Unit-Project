@@ -29,13 +29,6 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
-            this.question_label = new System.Windows.Forms.Label();
-            this.variant_5 = new System.Windows.Forms.RadioButton();
-            this.variant_4 = new System.Windows.Forms.RadioButton();
-            this.variant_3 = new System.Windows.Forms.RadioButton();
-            this.variant_2 = new System.Windows.Forms.RadioButton();
-            this.variant_1 = new System.Windows.Forms.RadioButton();
-            this.button3 = new System.Windows.Forms.Button();
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.ресурсToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.загрузитьToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -43,11 +36,6 @@
             this.начатьЗановоToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.пулВопросовToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.оПрограммеToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.label1 = new System.Windows.Forms.Label();
-            this.button1 = new System.Windows.Forms.Button();
-            this.question_panel = new System.Windows.Forms.Panel();
-            this.label6 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
             this.start_panel = new System.Windows.Forms.Panel();
             this.label5 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
@@ -55,124 +43,20 @@
             this.label2 = new System.Windows.Forms.Label();
             this.button2 = new System.Windows.Forms.Button();
             this.start_label = new System.Windows.Forms.Label();
+            this.variant_1 = new System.Windows.Forms.RadioButton();
+            this.label6 = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
+            this.button1 = new System.Windows.Forms.Button();
+            this.label1 = new System.Windows.Forms.Label();
+            this.variant_2 = new System.Windows.Forms.RadioButton();
+            this.button3 = new System.Windows.Forms.Button();
+            this.variant_3 = new System.Windows.Forms.RadioButton();
+            this.variant_5 = new System.Windows.Forms.RadioButton();
+            this.variant_4 = new System.Windows.Forms.RadioButton();
+            this.question_label = new System.Windows.Forms.Label();
             this.menuStrip1.SuspendLayout();
-            this.question_panel.SuspendLayout();
             this.start_panel.SuspendLayout();
             this.SuspendLayout();
-            // 
-            // question_label
-            // 
-            this.question_label.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.question_label.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(248)))), ((int)(((byte)(248)))));
-            this.question_label.Font = new System.Drawing.Font("HelveticaNeueCyr", 13.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.question_label.ForeColor = System.Drawing.Color.Black;
-            this.question_label.Location = new System.Drawing.Point(4, 38);
-            this.question_label.Name = "question_label";
-            this.question_label.Padding = new System.Windows.Forms.Padding(2);
-            this.question_label.Size = new System.Drawing.Size(698, 91);
-            this.question_label.TabIndex = 0;
-            this.question_label.Text = "question_label";
-            // 
-            // variant_5
-            // 
-            this.variant_5.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.variant_5.AutoEllipsis = true;
-            this.variant_5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(248)))), ((int)(((byte)(248)))));
-            this.variant_5.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(248)))), ((int)(((byte)(248)))));
-            this.variant_5.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(248)))), ((int)(((byte)(248)))));
-            this.variant_5.Font = new System.Drawing.Font("HelveticaNeueCyr", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.variant_5.ForeColor = System.Drawing.Color.Black;
-            this.variant_5.Location = new System.Drawing.Point(17, 400);
-            this.variant_5.Name = "variant_5";
-            this.variant_5.Padding = new System.Windows.Forms.Padding(2);
-            this.variant_5.Size = new System.Drawing.Size(684, 61);
-            this.variant_5.TabIndex = 1;
-            this.variant_5.Text = "variant_5";
-            this.variant_5.UseVisualStyleBackColor = false;
-            // 
-            // variant_4
-            // 
-            this.variant_4.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.variant_4.AutoEllipsis = true;
-            this.variant_4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(248)))), ((int)(((byte)(248)))));
-            this.variant_4.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(248)))), ((int)(((byte)(248)))));
-            this.variant_4.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(248)))), ((int)(((byte)(248)))));
-            this.variant_4.Font = new System.Drawing.Font("HelveticaNeueCyr", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.variant_4.ForeColor = System.Drawing.Color.Black;
-            this.variant_4.Location = new System.Drawing.Point(17, 333);
-            this.variant_4.Name = "variant_4";
-            this.variant_4.Padding = new System.Windows.Forms.Padding(2);
-            this.variant_4.Size = new System.Drawing.Size(684, 61);
-            this.variant_4.TabIndex = 2;
-            this.variant_4.Text = "variant_4";
-            this.variant_4.UseVisualStyleBackColor = false;
-            // 
-            // variant_3
-            // 
-            this.variant_3.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.variant_3.AutoEllipsis = true;
-            this.variant_3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(248)))), ((int)(((byte)(248)))));
-            this.variant_3.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(248)))), ((int)(((byte)(248)))));
-            this.variant_3.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(248)))), ((int)(((byte)(248)))));
-            this.variant_3.Font = new System.Drawing.Font("HelveticaNeueCyr", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.variant_3.ForeColor = System.Drawing.Color.Black;
-            this.variant_3.Location = new System.Drawing.Point(17, 266);
-            this.variant_3.Name = "variant_3";
-            this.variant_3.Padding = new System.Windows.Forms.Padding(2);
-            this.variant_3.Size = new System.Drawing.Size(684, 61);
-            this.variant_3.TabIndex = 3;
-            this.variant_3.Text = "variant_3";
-            this.variant_3.UseVisualStyleBackColor = false;
-            // 
-            // variant_2
-            // 
-            this.variant_2.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.variant_2.AutoEllipsis = true;
-            this.variant_2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(248)))), ((int)(((byte)(248)))));
-            this.variant_2.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(248)))), ((int)(((byte)(248)))));
-            this.variant_2.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(248)))), ((int)(((byte)(248)))));
-            this.variant_2.Font = new System.Drawing.Font("HelveticaNeueCyr", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.variant_2.ForeColor = System.Drawing.Color.Black;
-            this.variant_2.Location = new System.Drawing.Point(17, 199);
-            this.variant_2.Name = "variant_2";
-            this.variant_2.Padding = new System.Windows.Forms.Padding(2);
-            this.variant_2.Size = new System.Drawing.Size(684, 61);
-            this.variant_2.TabIndex = 4;
-            this.variant_2.Text = "variant_2";
-            this.variant_2.UseVisualStyleBackColor = false;
-            // 
-            // variant_1
-            // 
-            this.variant_1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.variant_1.AutoEllipsis = true;
-            this.variant_1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(248)))), ((int)(((byte)(248)))));
-            this.variant_1.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(248)))), ((int)(((byte)(248)))));
-            this.variant_1.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(248)))), ((int)(((byte)(248)))));
-            this.variant_1.Font = new System.Drawing.Font("HelveticaNeueCyr", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.variant_1.ForeColor = System.Drawing.Color.Black;
-            this.variant_1.Location = new System.Drawing.Point(17, 132);
-            this.variant_1.Name = "variant_1";
-            this.variant_1.Padding = new System.Windows.Forms.Padding(2);
-            this.variant_1.Size = new System.Drawing.Size(684, 61);
-            this.variant_1.TabIndex = 5;
-            this.variant_1.Text = "variant_1";
-            this.variant_1.UseVisualStyleBackColor = false;
-            // 
-            // button3
-            // 
-            this.button3.Location = new System.Drawing.Point(111, 3);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(162, 32);
-            this.button3.TabIndex = 8;
-            this.button3.Text = "Следующий вопрос";
-            this.button3.UseVisualStyleBackColor = true;
-            this.button3.Click += new System.EventHandler(this.button3_Click);
             // 
             // menuStrip1
             // 
@@ -199,7 +83,7 @@
             // загрузитьToolStripMenuItem
             // 
             this.загрузитьToolStripMenuItem.Name = "загрузитьToolStripMenuItem";
-            this.загрузитьToolStripMenuItem.Size = new System.Drawing.Size(181, 26);
+            this.загрузитьToolStripMenuItem.Size = new System.Drawing.Size(165, 26);
             this.загрузитьToolStripMenuItem.Text = "Загрузить";
             this.загрузитьToolStripMenuItem.Click += new System.EventHandler(this.загрузитьToolStripMenuItem_Click);
             // 
@@ -233,67 +117,6 @@
             this.оПрограммеToolStripMenuItem.Text = "О программе";
             this.оПрограммеToolStripMenuItem.Click += new System.EventHandler(this.оПрограммеToolStripMenuItem_Click);
             // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("HelveticaNeueCyr", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label1.Location = new System.Drawing.Point(289, 3);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(54, 19);
-            this.label1.TabIndex = 10;
-            this.label1.Text = "label1";
-            // 
-            // button1
-            // 
-            this.button1.Location = new System.Drawing.Point(8, 3);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(97, 32);
-            this.button1.TabIndex = 11;
-            this.button1.Text = "Проверить";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
-            // 
-            // question_panel
-            // 
-            this.question_panel.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.question_panel.Controls.Add(this.label6);
-            this.question_panel.Controls.Add(this.label3);
-            this.question_panel.Controls.Add(this.question_label);
-            this.question_panel.Controls.Add(this.button1);
-            this.question_panel.Controls.Add(this.variant_1);
-            this.question_panel.Controls.Add(this.label1);
-            this.question_panel.Controls.Add(this.variant_2);
-            this.question_panel.Controls.Add(this.button3);
-            this.question_panel.Controls.Add(this.variant_3);
-            this.question_panel.Controls.Add(this.variant_5);
-            this.question_panel.Controls.Add(this.variant_4);
-            this.question_panel.Location = new System.Drawing.Point(12, 40);
-            this.question_panel.Name = "question_panel";
-            this.question_panel.Size = new System.Drawing.Size(719, 493);
-            this.question_panel.TabIndex = 12;
-            // 
-            // label6
-            // 
-            this.label6.AutoSize = true;
-            this.label6.Font = new System.Drawing.Font("HelveticaNeueCyr", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label6.Location = new System.Drawing.Point(14, 464);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(46, 16);
-            this.label6.TabIndex = 13;
-            this.label6.Text = "label6";
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("HelveticaNeueCyr", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label3.Location = new System.Drawing.Point(570, 464);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(46, 16);
-            this.label3.TabIndex = 12;
-            this.label3.Text = "label3";
-            // 
             // start_panel
             // 
             this.start_panel.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
@@ -305,9 +128,9 @@
             this.start_panel.Controls.Add(this.label2);
             this.start_panel.Controls.Add(this.button2);
             this.start_panel.Controls.Add(this.start_label);
-            this.start_panel.Location = new System.Drawing.Point(12, 539);
+            this.start_panel.Location = new System.Drawing.Point(106, 540);
             this.start_panel.Name = "start_panel";
-            this.start_panel.Size = new System.Drawing.Size(719, 493);
+            this.start_panel.Size = new System.Drawing.Size(543, 493);
             this.start_panel.TabIndex = 12;
             this.start_panel.Paint += new System.Windows.Forms.PaintEventHandler(this.start_panel_Paint);
             // 
@@ -370,9 +193,167 @@
             this.start_label.Font = new System.Drawing.Font("HelveticaNeueCyr", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.start_label.Location = new System.Drawing.Point(9, 56);
             this.start_label.Name = "start_label";
-            this.start_label.Size = new System.Drawing.Size(710, 198);
+            this.start_label.Size = new System.Drawing.Size(534, 198);
             this.start_label.TabIndex = 0;
             this.start_label.Text = resources.GetString("start_label.Text");
+            // 
+            // variant_1
+            // 
+            this.variant_1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.variant_1.AutoEllipsis = true;
+            this.variant_1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(248)))), ((int)(((byte)(248)))));
+            this.variant_1.Checked = true;
+            this.variant_1.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(248)))), ((int)(((byte)(248)))));
+            this.variant_1.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(248)))), ((int)(((byte)(248)))));
+            this.variant_1.Font = new System.Drawing.Font("HelveticaNeueCyr", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.variant_1.ForeColor = System.Drawing.Color.Black;
+            this.variant_1.Location = new System.Drawing.Point(7, 182);
+            this.variant_1.Name = "variant_1";
+            this.variant_1.Padding = new System.Windows.Forms.Padding(2);
+            this.variant_1.Size = new System.Drawing.Size(724, 61);
+            this.variant_1.TabIndex = 25;
+            this.variant_1.TabStop = true;
+            this.variant_1.Text = "variant_1";
+            this.variant_1.UseVisualStyleBackColor = false;
+            // 
+            // label6
+            // 
+            this.label6.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.label6.AutoSize = true;
+            this.label6.Font = new System.Drawing.Font("HelveticaNeueCyr", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label6.Location = new System.Drawing.Point(12, 520);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(46, 16);
+            this.label6.TabIndex = 24;
+            this.label6.Text = "label6";
+            // 
+            // label3
+            // 
+            this.label3.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("HelveticaNeueCyr", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label3.Location = new System.Drawing.Point(633, 520);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(46, 16);
+            this.label3.TabIndex = 23;
+            this.label3.Text = "label3";
+            // 
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(3, 34);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(97, 32);
+            this.button1.TabIndex = 22;
+            this.button1.Text = "Проверить";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("HelveticaNeueCyr", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label1.Location = new System.Drawing.Point(274, 34);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(54, 19);
+            this.label1.TabIndex = 21;
+            this.label1.Text = "label1";
+            // 
+            // variant_2
+            // 
+            this.variant_2.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.variant_2.AutoEllipsis = true;
+            this.variant_2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(248)))), ((int)(((byte)(248)))));
+            this.variant_2.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(248)))), ((int)(((byte)(248)))));
+            this.variant_2.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(248)))), ((int)(((byte)(248)))));
+            this.variant_2.Font = new System.Drawing.Font("HelveticaNeueCyr", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.variant_2.ForeColor = System.Drawing.Color.Black;
+            this.variant_2.Location = new System.Drawing.Point(7, 249);
+            this.variant_2.Name = "variant_2";
+            this.variant_2.Padding = new System.Windows.Forms.Padding(2);
+            this.variant_2.Size = new System.Drawing.Size(724, 61);
+            this.variant_2.TabIndex = 19;
+            this.variant_2.Text = "variant_2";
+            this.variant_2.UseVisualStyleBackColor = false;
+            // 
+            // button3
+            // 
+            this.button3.Location = new System.Drawing.Point(106, 34);
+            this.button3.Name = "button3";
+            this.button3.Size = new System.Drawing.Size(162, 32);
+            this.button3.TabIndex = 20;
+            this.button3.Text = "Следующий вопрос";
+            this.button3.UseVisualStyleBackColor = true;
+            this.button3.Click += new System.EventHandler(this.button3_Click);
+            // 
+            // variant_3
+            // 
+            this.variant_3.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.variant_3.AutoEllipsis = true;
+            this.variant_3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(248)))), ((int)(((byte)(248)))));
+            this.variant_3.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(248)))), ((int)(((byte)(248)))));
+            this.variant_3.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(248)))), ((int)(((byte)(248)))));
+            this.variant_3.Font = new System.Drawing.Font("HelveticaNeueCyr", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.variant_3.ForeColor = System.Drawing.Color.Black;
+            this.variant_3.Location = new System.Drawing.Point(7, 316);
+            this.variant_3.Name = "variant_3";
+            this.variant_3.Padding = new System.Windows.Forms.Padding(2);
+            this.variant_3.Size = new System.Drawing.Size(724, 61);
+            this.variant_3.TabIndex = 18;
+            this.variant_3.Text = "variant_3";
+            this.variant_3.UseVisualStyleBackColor = false;
+            // 
+            // variant_5
+            // 
+            this.variant_5.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.variant_5.AutoEllipsis = true;
+            this.variant_5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(248)))), ((int)(((byte)(248)))));
+            this.variant_5.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(248)))), ((int)(((byte)(248)))));
+            this.variant_5.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(248)))), ((int)(((byte)(248)))));
+            this.variant_5.Font = new System.Drawing.Font("HelveticaNeueCyr", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.variant_5.ForeColor = System.Drawing.Color.Black;
+            this.variant_5.Location = new System.Drawing.Point(7, 450);
+            this.variant_5.Name = "variant_5";
+            this.variant_5.Padding = new System.Windows.Forms.Padding(2);
+            this.variant_5.Size = new System.Drawing.Size(724, 61);
+            this.variant_5.TabIndex = 16;
+            this.variant_5.Text = "variant_5";
+            this.variant_5.UseVisualStyleBackColor = false;
+            // 
+            // variant_4
+            // 
+            this.variant_4.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.variant_4.AutoEllipsis = true;
+            this.variant_4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(248)))), ((int)(((byte)(248)))));
+            this.variant_4.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(248)))), ((int)(((byte)(248)))));
+            this.variant_4.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(248)))), ((int)(((byte)(248)))));
+            this.variant_4.Font = new System.Drawing.Font("HelveticaNeueCyr", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.variant_4.ForeColor = System.Drawing.Color.Black;
+            this.variant_4.Location = new System.Drawing.Point(7, 383);
+            this.variant_4.Name = "variant_4";
+            this.variant_4.Padding = new System.Windows.Forms.Padding(2);
+            this.variant_4.Size = new System.Drawing.Size(724, 61);
+            this.variant_4.TabIndex = 17;
+            this.variant_4.Text = "variant_4";
+            this.variant_4.UseVisualStyleBackColor = false;
+            // 
+            // question_label
+            // 
+            this.question_label.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.question_label.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(248)))), ((int)(((byte)(248)))));
+            this.question_label.Font = new System.Drawing.Font("HelveticaNeueCyr", 13.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.question_label.ForeColor = System.Drawing.Color.Black;
+            this.question_label.Location = new System.Drawing.Point(6, 69);
+            this.question_label.Name = "question_label";
+            this.question_label.Padding = new System.Windows.Forms.Padding(2);
+            this.question_label.Size = new System.Drawing.Size(725, 110);
+            this.question_label.TabIndex = 26;
+            this.question_label.Text = "question_label";
             // 
             // Form1
             // 
@@ -381,8 +362,18 @@
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(248)))), ((int)(((byte)(248)))));
             this.ClientSize = new System.Drawing.Size(747, 545);
             this.Controls.Add(this.start_panel);
-            this.Controls.Add(this.question_panel);
+            this.Controls.Add(this.variant_1);
+            this.Controls.Add(this.label6);
+            this.Controls.Add(this.label3);
+            this.Controls.Add(this.button1);
+            this.Controls.Add(this.label1);
+            this.Controls.Add(this.variant_2);
+            this.Controls.Add(this.button3);
+            this.Controls.Add(this.variant_3);
+            this.Controls.Add(this.variant_5);
+            this.Controls.Add(this.variant_4);
             this.Controls.Add(this.menuStrip1);
+            this.Controls.Add(this.question_label);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MainMenuStrip = this.menuStrip1;
             this.MinimumSize = new System.Drawing.Size(700, 570);
@@ -391,10 +382,9 @@
             this.Text = "Turan test unit";
             this.Load += new System.EventHandler(this.Form1_Load);
             this.Shown += new System.EventHandler(this.Form1_Shown);
+            this.SizeChanged += new System.EventHandler(this.Form1_SizeChanged);
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
-            this.question_panel.ResumeLayout(false);
-            this.question_panel.PerformLayout();
             this.start_panel.ResumeLayout(false);
             this.start_panel.PerformLayout();
             this.ResumeLayout(false);
@@ -403,33 +393,31 @@
         }
 
         #endregion
-
-        private System.Windows.Forms.Label question_label;
-        private System.Windows.Forms.RadioButton variant_5;
-        private System.Windows.Forms.RadioButton variant_4;
-        private System.Windows.Forms.RadioButton variant_3;
-        private System.Windows.Forms.RadioButton variant_2;
-        private System.Windows.Forms.RadioButton variant_1;
-        private System.Windows.Forms.Button button3;
         private System.Windows.Forms.MenuStrip menuStrip1;
         private System.Windows.Forms.ToolStripMenuItem ресурсToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem загрузитьToolStripMenuItem;
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Panel question_panel;
-        private System.Windows.Forms.Panel start_panel;
-        private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.Label start_label;
-        private System.Windows.Forms.Label label2;
         private System.Windows.Forms.ToolStripMenuItem тестированиеToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem начатьЗановоToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem пулВопросовToolStripMenuItem;
-        private System.Windows.Forms.Button button4;
         private System.Windows.Forms.ToolStripMenuItem оПрограммеToolStripMenuItem;
-        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Panel start_panel;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Button button4;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Label start_label;
+        private System.Windows.Forms.RadioButton variant_1;
         private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.RadioButton variant_2;
+        private System.Windows.Forms.Button button3;
+        private System.Windows.Forms.RadioButton variant_3;
+        private System.Windows.Forms.RadioButton variant_5;
+        private System.Windows.Forms.RadioButton variant_4;
+        private System.Windows.Forms.Label question_label;
     }
 }
 

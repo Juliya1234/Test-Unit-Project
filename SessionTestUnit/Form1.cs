@@ -295,5 +295,11 @@ namespace SessionTestUnit
         {
             new AboutBox1().Show();
         }
+
+        private void Form1_SizeChanged(object sender, EventArgs e)
+        {
+            question_label.Height = this.Height - 480;
+        }
+
     }
 }

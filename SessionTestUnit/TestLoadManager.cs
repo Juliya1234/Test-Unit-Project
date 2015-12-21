@@ -26,58 +26,65 @@ namespace SessionTestUnit
             for (int i = 0; i < question_count; i++)
             {
                 //------------------------------------------------------
-                text = text.Substring(10);
-                string sub_text;
-                int end_pos = text.IndexOf("<question>");
-                if (end_pos > -1)
-                    sub_text = text.Substring(0, text.IndexOf("<question>"));
-                else 
-                    sub_text = text.Substring(0, text.Length);
+                try {
+                    text = text.Substring(10);
+                    string sub_text;
+                    int end_pos = text.IndexOf("<question>");
+                    if (end_pos > -1)
+                        sub_text = text.Substring(0, text.IndexOf("<question>"));
+                    else
+                        sub_text = text.Substring(0, text.Length);
 
-                int var_count = (sub_text.Length - sub_text.Replace("<variant>", "").Length) / "<variant>".Length;
+                    int var_count = (sub_text.Length - sub_text.Replace("<variant>", "").Length) / "<variant>".Length;
 
-                string quest = sub_text.Substring(0, text.IndexOf("\r\n"));
-                sub_text = sub_text.Substring(text.IndexOf("<variant>"));
-                var hash = new List<string>(0);
-                for (int j = 0; j < var_count; j++)
-                {
-                    try {
-                        sub_text = sub_text.Substring(sub_text.IndexOf("<variant>") + 9);
-                        int pos = sub_text.IndexOf("\r\n");
-                        string var = sub_text.Substring(0, pos);
-                        hash.Add(var);
-                        sub_text = sub_text.Substring(pos + 2);
-                    } catch (Exception ex)
+                    string quest = sub_text.Substring(0, text.IndexOf("\r\n"));
+                    sub_text = sub_text.Substring(text.IndexOf("<variant>"));
+                    var hash = new List<string>(0);
+                    for (int j = 0; j < var_count; j++)
                     {
-                        MessageBox.Show("Проблема в обработке вопроса: \r\n" + quest);
+                        try {
+                            sub_text = sub_text.Substring(sub_text.IndexOf("<variant>") + 9);
+                            int pos = sub_text.IndexOf("\r\n");
+                            string var = sub_text.Substring(0, pos);
+                            hash.Add(var);
+                            sub_text = sub_text.Substring(pos + 2);
+                        } catch (Exception ex)
+                        {
+                            MessageBox.Show("Проблема в обработке вопроса: \r\n" + quest);
+                        }
                     }
+
+                    if (hash.Count == 5)
+                    {
+                        var question = new TestQuestion();
+                        question.question = quest;
+                        question.variant_1 = hash[0];
+                        question.variant_2 = hash[1];
+                        question.variant_3 = hash[2];
+                        question.variant_4 = hash[3];
+                        question.variant_5 = hash[4];
+                        list.Add(question);
+                    }
+                    if (hash.Count == 4)
+                    {
+                        var question = new TestQuestion();
+                        question.question = quest;
+                        question.variant_1 = hash[0];
+                        question.variant_2 = hash[1];
+                        question.variant_3 = hash[2];
+                        question.variant_4 = hash[3];
+                        question.variant_5 = "Ошибка: в вопросе всего 4 варианта ответа";
+                        list.Add(question);
+                    }
+
+                    if (end_pos > -1)
+                        text = text.Substring(end_pos);
                 }
-                
-                if (hash.Count == 5)
+                catch (Exception ex)
                 {
-                    var question = new TestQuestion();
-                    question.question = quest;
-                    question.variant_1 = hash[0];
-                    question.variant_2 = hash[1];
-                    question.variant_3 = hash[2];
-                    question.variant_4 = hash[3];
-                    question.variant_5 = hash[4];
-                    list.Add(question);
+                    MessageBox.Show("Возникла ошибка на этапе обработки вопроса " 
+                        + i + "\r\n" + ex.Message);
                 }
-                if (hash.Count == 4)
-                {
-                    var question = new TestQuestion();
-                    question.question = quest;
-                    question.variant_1 = hash[0];
-                    question.variant_2 = hash[1];
-                    question.variant_3 = hash[2];
-                    question.variant_4 = hash[3];
-                    question.variant_5 = "Ошибка: в вопросе всего 4 варианта ответа";
-                    list.Add(question);
-                }
-                
-                if (end_pos > -1)
-                    text = text.Substring(end_pos);
             }
             first_list_count = list.Count;           
         }
