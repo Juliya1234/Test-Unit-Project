@@ -348,17 +348,16 @@
             this.question_label.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(248)))), ((int)(((byte)(248)))));
             this.question_label.Font = new System.Drawing.Font("HelveticaNeueCyr", 13.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.question_label.ForeColor = System.Drawing.Color.Black;
-            this.question_label.Location = new System.Drawing.Point(6, 69);
+            this.question_label.Location = new System.Drawing.Point(6, 87);
             this.question_label.Name = "question_label";
             this.question_label.Padding = new System.Windows.Forms.Padding(2);
-            this.question_label.Size = new System.Drawing.Size(725, 110);
+            this.question_label.Size = new System.Drawing.Size(725, 92);
             this.question_label.TabIndex = 26;
             this.question_label.Text = "question_label";
             // 
             // Form1
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(248)))), ((int)(((byte)(248)))));
             this.ClientSize = new System.Drawing.Size(747, 545);
             this.Controls.Add(this.start_panel);
