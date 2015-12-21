@@ -12,6 +12,7 @@ namespace SessionTestUnit
     {
         private List<TestQuestion> list;
         private int first_list_count;
+        private int question_count = -1;
         public TestLoadManager()
         {
             list = new List<TestQuestion>(0);
@@ -21,8 +22,8 @@ namespace SessionTestUnit
         {
             list = new List<TestQuestion>(0);
             text = text.Replace("\t", "");
-            int count = (text.Length - text.Replace("<question>", "").Length) / "<question>".Length;
-            for (int i = 0; i < count; i++)
+            question_count = (text.Length - text.Replace("<question>", "").Length) / "<question>".Length;
+            for (int i = 0; i < question_count; i++)
             {
                 //------------------------------------------------------
                 text = text.Substring(10);
@@ -113,7 +114,10 @@ namespace SessionTestUnit
                 list = temp;
                 first_list_count = list.Count;
             }
-
+        }
+        public int get_question_count()
+        {
+            return question_count;
         }
     }
 }

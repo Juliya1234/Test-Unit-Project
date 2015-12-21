@@ -102,6 +102,17 @@ namespace SessionTestUnit
             answered = new List<AnsweredQuestion>(0);
             if (file_name != "")
                 load_source_file(file_name);
+            //----------------------------
+            if ((manager != null) && (manager.get_question_count() > 0))
+            {
+                label2.Text = "Файл загружен. Нажмите \"Начать\". Вопросов " 
+                                + manager.get_question_count();
+                loaded_file = true;
+            }
+            else
+                label2.Text = @"Возникли проблемы с обработкой вопросов. Количество вопросов: " 
+                                + manager.get_question_count();
+            //--------------------------
             button3.Text = "Следующий вопрос";
 
         }
@@ -120,8 +131,6 @@ namespace SessionTestUnit
                  //load_source_file(openFileDialog1.FileName);
                  file_name = openFileDialog1.FileName;
                  load_settings();
-                 label2.Text = "Файл загружен. Нажмите \"Начать\"";
-                 loaded_file = true;
             }
             
         }
@@ -143,7 +152,6 @@ namespace SessionTestUnit
                     label6.Text = "Включено отображение ругательств. Вы сами этого хотите";
                 else
                     label6.Text = "Ругательства выключены";
-                button1.Enabled = true;
                 if (answered.Count == manager.get_first_list_count())
                     button3.Text = "Показать результат";
             }
@@ -239,12 +247,13 @@ namespace SessionTestUnit
         {
             if (current_question != null)
                 show_rigth();
-            button1.Enabled = false;
+            //button1.Enabled = false;
         }
 
         private void Form1_Load(object sender, EventArgs e)
         {
             start_panel.Dock = DockStyle.Fill;
+            label2.Text = "";
             label3.Text = "Версия: " + Assembly.GetExecutingAssembly().GetName().Version.ToString(); ;
         }
 

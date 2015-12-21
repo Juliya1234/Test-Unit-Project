@@ -46,15 +46,15 @@
             this.label1 = new System.Windows.Forms.Label();
             this.button1 = new System.Windows.Forms.Button();
             this.question_panel = new System.Windows.Forms.Panel();
+            this.label6 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.start_panel = new System.Windows.Forms.Panel();
+            this.label5 = new System.Windows.Forms.Label();
+            this.label4 = new System.Windows.Forms.Label();
             this.button4 = new System.Windows.Forms.Button();
             this.label2 = new System.Windows.Forms.Label();
             this.button2 = new System.Windows.Forms.Button();
             this.start_label = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
-            this.label5 = new System.Windows.Forms.Label();
-            this.label6 = new System.Windows.Forms.Label();
             this.menuStrip1.SuspendLayout();
             this.question_panel.SuspendLayout();
             this.start_panel.SuspendLayout();
@@ -274,6 +274,16 @@
             this.question_panel.Size = new System.Drawing.Size(719, 493);
             this.question_panel.TabIndex = 12;
             // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Font = new System.Drawing.Font("HelveticaNeueCyr", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label6.Location = new System.Drawing.Point(14, 464);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(46, 16);
+            this.label6.TabIndex = 13;
+            this.label6.Text = "label6";
+            // 
             // label3
             // 
             this.label3.AutoSize = true;
@@ -301,6 +311,26 @@
             this.start_panel.TabIndex = 12;
             this.start_panel.Paint += new System.Windows.Forms.PaintEventHandler(this.start_panel_Paint);
             // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Font = new System.Drawing.Font("HelveticaNeueCyr", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label5.Location = new System.Drawing.Point(8, 13);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(524, 27);
+            this.label5.TabIndex = 5;
+            this.label5.Text = "Добро пожаловать в программу тестироания";
+            // 
+            // label4
+            // 
+            this.label4.Font = new System.Drawing.Font("HelveticaNeueCyr", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label4.Location = new System.Drawing.Point(8, 254);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(703, 106);
+            this.label4.TabIndex = 4;
+            this.label4.Text = "В программе присутствут ругательства! Если вы не желаете их видеть, то настройте " +
+    "вывод ругательств в настройках. По умолчанию они выключены";
+            // 
             // button4
             // 
             this.button4.Font = new System.Drawing.Font("HelveticaNeueCyr", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
@@ -315,11 +345,12 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("HelveticaNeueCyr", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label2.Font = new System.Drawing.Font("HelveticaNeueCyr", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.label2.Location = new System.Drawing.Point(8, 393);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(0, 27);
+            this.label2.Size = new System.Drawing.Size(63, 22);
             this.label2.TabIndex = 2;
+            this.label2.Text = "label2";
             // 
             // button2
             // 
@@ -342,36 +373,6 @@
             this.start_label.Size = new System.Drawing.Size(710, 198);
             this.start_label.TabIndex = 0;
             this.start_label.Text = resources.GetString("start_label.Text");
-            // 
-            // label4
-            // 
-            this.label4.Font = new System.Drawing.Font("HelveticaNeueCyr", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label4.Location = new System.Drawing.Point(8, 254);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(703, 106);
-            this.label4.TabIndex = 4;
-            this.label4.Text = "В программе присутствут ругательства! Если вы не желаете их видеть, то настройте " +
-    "вывод ругательств в настройках. По умолчанию они выключены";
-            // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("HelveticaNeueCyr", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label5.Location = new System.Drawing.Point(8, 13);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(503, 26);
-            this.label5.TabIndex = 5;
-            this.label5.Text = "Добро пожаловать в программу тестироания";
-            // 
-            // label6
-            // 
-            this.label6.AutoSize = true;
-            this.label6.Font = new System.Drawing.Font("HelveticaNeueCyr", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label6.Location = new System.Drawing.Point(14, 464);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(46, 16);
-            this.label6.TabIndex = 13;
-            this.label6.Text = "label6";
             // 
             // Form1
             // 
