@@ -19,3 +19,12 @@
 <variant>группирующие
 <variant>аннотационные
 
+<question>В момент исполнения команды
+[methody@localhost methody]$ who methody tty1 Sep 23 16:31 (localhost)
+methody2 tty2 Sep 23 17:12 (localhost) в системе было зарегистрировано:
+<variant>2 пользователя
+<variant>1 пользователя
+<variant>3 пользователя
+<variant>4 пользователя
+<variant>5 пользователя
+

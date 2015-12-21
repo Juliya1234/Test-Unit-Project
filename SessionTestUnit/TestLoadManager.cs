@@ -37,7 +37,7 @@ namespace SessionTestUnit
 
                     int var_count = (sub_text.Length - sub_text.Replace("<variant>", "").Length) / "<variant>".Length;
 
-                    string quest = sub_text.Substring(0, text.IndexOf("\r\n"));
+                    string quest = sub_text.Substring(0, text.IndexOf("\r\n<variant>"));
                     sub_text = sub_text.Substring(text.IndexOf("<variant>"));
                     var hash = new List<string>(0);
                     for (int j = 0; j < var_count; j++)
