@@ -19,7 +19,9 @@ namespace SessionTestUnit
             this.labelVersion.Text = String.Format("Версия {0}", AssemblyVersion);
             this.labelCopyright.Text = AssemblyCopyright;
             this.labelCompanyName.Text = AssemblyCompany;
-            this.textBoxDescription.Text = AssemblyDescription;
+            this.textBoxDescription.Text = AssemblyDescription + 
+                @"
+            Программа разработана потому что делать было нечего. Все права принадлежат всем. Но если Вы благодарны разработчику, то крикните в окно 'Спасибо'. Этого будет достаточно";
         }
 
         #region Методы доступа к атрибутам сборки

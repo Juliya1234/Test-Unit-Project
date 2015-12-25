@@ -301,5 +301,10 @@ namespace SessionTestUnit
             question_label.Height = this.Height - 480;
         }
 
+        private void закончитьToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            if ((answered != null) && (answered.Count > 0))
+                new resultForm(rigth_checked, answered).Show();
+        }
     }
 }

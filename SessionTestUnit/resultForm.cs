@@ -33,10 +33,14 @@ namespace SessionTestUnit
             {
                 double result = (double)rigth / hash.Count;
                 result = result * 100;
-                label2.Text = result.ToString("#.##") + "%\r\n" + get_words(result);
+                label1.Text = "Ваш результат: " + result.ToString("#.##") + "%";
+                label2.Text = get_words(result);
             }
             else
-                label2.Text = "0 %\r\n" + get_words(0);
+            {
+                label1.Text = "Ваш результат: 0%";
+                label2.Text = get_words(0);
+            }
             create_labels(hash);
             //----------------------------------------
     }
@@ -98,7 +102,7 @@ namespace SessionTestUnit
                     label.BackColor = Color.FromArgb(255, 128, 128);
                 }
                 label.Location = new Point(label2.Location.X, start_location_y);
-                label.Font = new Font("HelveticaNeueCyr", 10.2F, 
+                label.Font = new Font("Sitka Text", 10.2F, 
                     FontStyle.Regular, GraphicsUnit.Point, 204);
                 label.AutoSize = false;
                 label.Anchor = (AnchorStyles)(AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right);
