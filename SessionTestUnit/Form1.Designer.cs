@@ -34,6 +34,7 @@
             this.загрузитьToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.тестированиеToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.начатьЗановоToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.закончитьToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.пулВопросовToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.оПрограммеToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.start_panel = new System.Windows.Forms.Panel();
@@ -53,7 +54,6 @@
             this.variant_5 = new System.Windows.Forms.RadioButton();
             this.variant_4 = new System.Windows.Forms.RadioButton();
             this.question_label = new System.Windows.Forms.Label();
-            this.закончитьToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.start_panel.SuspendLayout();
             this.SuspendLayout();
@@ -104,15 +104,23 @@
             // 
             this.начатьЗановоToolStripMenuItem.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.начатьЗановоToolStripMenuItem.Name = "начатьЗановоToolStripMenuItem";
-            this.начатьЗановоToolStripMenuItem.Size = new System.Drawing.Size(181, 26);
+            this.начатьЗановоToolStripMenuItem.Size = new System.Drawing.Size(180, 26);
             this.начатьЗановоToolStripMenuItem.Text = "Начать заново";
             this.начатьЗановоToolStripMenuItem.Click += new System.EventHandler(this.начатьЗановоToolStripMenuItem_Click);
+            // 
+            // закончитьToolStripMenuItem
+            // 
+            this.закончитьToolStripMenuItem.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.закончитьToolStripMenuItem.Name = "закончитьToolStripMenuItem";
+            this.закончитьToolStripMenuItem.Size = new System.Drawing.Size(180, 26);
+            this.закончитьToolStripMenuItem.Text = "Закончить";
+            this.закончитьToolStripMenuItem.Click += new System.EventHandler(this.закончитьToolStripMenuItem_Click);
             // 
             // пулВопросовToolStripMenuItem
             // 
             this.пулВопросовToolStripMenuItem.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.пулВопросовToolStripMenuItem.Name = "пулВопросовToolStripMenuItem";
-            this.пулВопросовToolStripMenuItem.Size = new System.Drawing.Size(181, 26);
+            this.пулВопросовToolStripMenuItem.Size = new System.Drawing.Size(180, 26);
             this.пулВопросовToolStripMenuItem.Text = "Настройки";
             this.пулВопросовToolStripMenuItem.Click += new System.EventHandler(this.пулВопросовToolStripMenuItem_Click);
             // 
@@ -135,7 +143,7 @@
             this.start_panel.Controls.Add(this.button2);
             this.start_panel.Controls.Add(this.start_label);
             this.start_panel.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.start_panel.Location = new System.Drawing.Point(106, 540);
+            this.start_panel.Location = new System.Drawing.Point(159, 540);
             this.start_panel.Name = "start_panel";
             this.start_panel.Size = new System.Drawing.Size(543, 493);
             this.start_panel.TabIndex = 12;
@@ -144,10 +152,10 @@
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Sitka Heading", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label5.Font = new System.Drawing.Font("Segoe UI", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.label5.Location = new System.Drawing.Point(8, 13);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(469, 33);
+            this.label5.Size = new System.Drawing.Size(522, 32);
             this.label5.TabIndex = 5;
             this.label5.Text = "Добро пожаловать в программу тестироания";
             // 
@@ -165,10 +173,10 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Sitka Text", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label2.Font = new System.Drawing.Font("Segoe UI", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.label2.Location = new System.Drawing.Point(8, 393);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(58, 24);
+            this.label2.Size = new System.Drawing.Size(63, 25);
             this.label2.TabIndex = 2;
             this.label2.Text = "label2";
             // 
@@ -187,7 +195,7 @@
             // 
             this.start_label.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.start_label.Font = new System.Drawing.Font("Sitka Text", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.start_label.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.start_label.Location = new System.Drawing.Point(9, 56);
             this.start_label.Name = "start_label";
             this.start_label.Size = new System.Drawing.Size(531, 311);
@@ -203,7 +211,7 @@
             this.variant_1.Checked = true;
             this.variant_1.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(248)))), ((int)(((byte)(248)))));
             this.variant_1.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(248)))), ((int)(((byte)(248)))));
-            this.variant_1.Font = new System.Drawing.Font("Sitka Text", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.variant_1.Font = new System.Drawing.Font("Segoe UI", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.variant_1.ForeColor = System.Drawing.Color.Black;
             this.variant_1.Location = new System.Drawing.Point(7, 182);
             this.variant_1.Name = "variant_1";
@@ -265,7 +273,7 @@
             this.variant_2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(248)))), ((int)(((byte)(248)))));
             this.variant_2.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(248)))), ((int)(((byte)(248)))));
             this.variant_2.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(248)))), ((int)(((byte)(248)))));
-            this.variant_2.Font = new System.Drawing.Font("Sitka Text", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.variant_2.Font = new System.Drawing.Font("Segoe UI", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.variant_2.ForeColor = System.Drawing.Color.Black;
             this.variant_2.Location = new System.Drawing.Point(7, 249);
             this.variant_2.Name = "variant_2";
@@ -294,7 +302,7 @@
             this.variant_3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(248)))), ((int)(((byte)(248)))));
             this.variant_3.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(248)))), ((int)(((byte)(248)))));
             this.variant_3.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(248)))), ((int)(((byte)(248)))));
-            this.variant_3.Font = new System.Drawing.Font("Sitka Text", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.variant_3.Font = new System.Drawing.Font("Segoe UI", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.variant_3.ForeColor = System.Drawing.Color.Black;
             this.variant_3.Location = new System.Drawing.Point(7, 316);
             this.variant_3.Name = "variant_3";
@@ -312,7 +320,7 @@
             this.variant_5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(248)))), ((int)(((byte)(248)))));
             this.variant_5.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(248)))), ((int)(((byte)(248)))));
             this.variant_5.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(248)))), ((int)(((byte)(248)))));
-            this.variant_5.Font = new System.Drawing.Font("Sitka Text", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.variant_5.Font = new System.Drawing.Font("Segoe UI", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.variant_5.ForeColor = System.Drawing.Color.Black;
             this.variant_5.Location = new System.Drawing.Point(7, 450);
             this.variant_5.Name = "variant_5";
@@ -330,7 +338,7 @@
             this.variant_4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(248)))), ((int)(((byte)(248)))));
             this.variant_4.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(248)))), ((int)(((byte)(248)))));
             this.variant_4.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(248)))), ((int)(((byte)(248)))));
-            this.variant_4.Font = new System.Drawing.Font("Sitka Text", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.variant_4.Font = new System.Drawing.Font("Segoe UI", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.variant_4.ForeColor = System.Drawing.Color.Black;
             this.variant_4.Location = new System.Drawing.Point(7, 383);
             this.variant_4.Name = "variant_4";
@@ -345,7 +353,7 @@
             this.question_label.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.question_label.BackColor = System.Drawing.Color.White;
-            this.question_label.Font = new System.Drawing.Font("Sitka Text", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.question_label.Font = new System.Drawing.Font("Segoe UI", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.question_label.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(26)))), ((int)(((byte)(26)))));
             this.question_label.Location = new System.Drawing.Point(6, 87);
             this.question_label.Name = "question_label";
@@ -353,14 +361,6 @@
             this.question_label.Size = new System.Drawing.Size(725, 92);
             this.question_label.TabIndex = 26;
             this.question_label.Text = "question_label";
-            // 
-            // закончитьToolStripMenuItem
-            // 
-            this.закончитьToolStripMenuItem.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.закончитьToolStripMenuItem.Name = "закончитьToolStripMenuItem";
-            this.закончитьToolStripMenuItem.Size = new System.Drawing.Size(181, 26);
-            this.закончитьToolStripMenuItem.Text = "Закончить";
-            this.закончитьToolStripMenuItem.Click += new System.EventHandler(this.закончитьToolStripMenuItem_Click);
             // 
             // Form1
             // 

@@ -102,7 +102,7 @@ namespace SessionTestUnit
                     label.BackColor = Color.FromArgb(255, 128, 128);
                 }
                 label.Location = new Point(label2.Location.X, start_location_y);
-                label.Font = new Font("Sitka Text", 10.2F, 
+                label.Font = new Font("Segoe UI", 10.2F, 
                     FontStyle.Regular, GraphicsUnit.Point, 204);
                 label.AutoSize = false;
                 label.Anchor = (AnchorStyles)(AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right);
