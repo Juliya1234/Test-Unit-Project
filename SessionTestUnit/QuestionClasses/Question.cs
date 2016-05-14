@@ -1,12 +1,6 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace SessionTestUnit
+﻿namespace SessionTestUnit.QuestionClasses
 {
-    public class TestQuestion
+    public class Question
     {
         public string question { get; set; }
         public string variant_1 { get; set; }
@@ -14,11 +8,11 @@ namespace SessionTestUnit
         public string variant_3 { get; set; }
         public string variant_4 { get; set; }
         public string variant_5 { get; set; }
-        public TestQuestion()
+        public Question()
         {
 
         }
-        public TestQuestion(string question, 
+        public Question(string question, 
                     string var1, 
                     string var2, 
                     string var3, 

@@ -1,13 +1,9 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.IO;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Xml.Serialization;
 
-namespace SessionTestUnit
+namespace SessionTestUnit.SettingsHelpers
 {
     public class SettingsManager
     {
@@ -39,9 +35,9 @@ namespace SessionTestUnit
                 {
                     var stream = new StreamReader(File.Open(file_name, FileMode.Open));
                     var serializer = new XmlSerializer(typeof(Settings));
-                    var return_settings = serializer.Deserialize(stream) as Settings;
+                    var returnSettings = serializer.Deserialize(stream) as Settings;
                     stream.Close();
-                    return return_settings;
+                    return returnSettings;
                 }
                 else
                 {
@@ -57,7 +53,7 @@ namespace SessionTestUnit
                 return new Settings();
             }
         }
-        private void define_error(string text)
+        private static void define_error(string text)
         {
             MessageBox.Show(text);
         }

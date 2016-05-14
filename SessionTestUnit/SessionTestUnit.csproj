@@ -8,14 +8,14 @@
     <OutputType>WinExe</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>SessionTestUnit</RootNamespace>
-    <AssemblyName>Test Unit</AssemblyName>
+    <AssemblyName>Platonus Tester</AssemblyName>
     <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
     <TargetFrameworkProfile />
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
-    <PlatformTarget>AnyCPU</PlatformTarget>
+    <PlatformTarget>x86</PlatformTarget>
     <DebugSymbols>true</DebugSymbols>
     <DebugType>full</DebugType>
     <Optimize>false</Optimize>
@@ -64,7 +64,10 @@
     <Compile Include="AboutBox1.Designer.cs">
       <DependentUpon>AboutBox1.cs</DependentUpon>
     </Compile>
-    <Compile Include="AnsweredQuestion.cs" />
+    <Compile Include="Helpers\CommentHelper.cs" />
+    <Compile Include="Helpers\SwearHelper.cs" />
+    <Compile Include="Helpers\UIHelper.cs" />
+    <Compile Include="QuestionClasses\AnsweredQuestion.cs" />
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -73,22 +76,23 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="QuestionClasses\QuestionProcessor.cs" />
     <Compile Include="resultForm.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="resultForm.Designer.cs">
       <DependentUpon>resultForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="Settings.cs" />
+    <Compile Include="SettingsHelpers\Settings.cs" />
     <Compile Include="SettingsForm.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="SettingsForm.Designer.cs">
       <DependentUpon>SettingsForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="SettingsManager.cs" />
-    <Compile Include="TestLoadManager.cs" />
-    <Compile Include="TestQuestion.cs" />
+    <Compile Include="SettingsHelpers\SettingsManager.cs" />
+    <Compile Include="QuestionClasses\QuestionManager.cs" />
+    <Compile Include="QuestionClasses\Question.cs" />
     <EmbeddedResource Include="AboutBox1.resx">
       <DependentUpon>AboutBox1.cs</DependentUpon>
     </EmbeddedResource>
@@ -127,6 +131,7 @@
   <ItemGroup>
     <Content Include="social_twitter_button_blue_icon.ico" />
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.

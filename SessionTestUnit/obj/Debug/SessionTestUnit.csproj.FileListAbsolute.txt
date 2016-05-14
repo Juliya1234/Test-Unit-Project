@@ -20,3 +20,15 @@ E:\GitHub\Test-Unit-Project\SessionTestUnit\obj\Debug\SessionTestUnit.resultForm
 E:\GitHub\Test-Unit-Project\SessionTestUnit\obj\Debug\SessionTestUnit.csproj.GenerateResource.Cache
 E:\GitHub\Test-Unit-Project\SessionTestUnit\obj\Debug\SessionTestUnit.AboutBox1.resources
 E:\GitHub\Test-Unit-Project\SessionTestUnit\obj\Debug\SessionTestUnit.SettingsForm.resources
+D:\GitHub\Test-Unit-Project\SessionTestUnit\obj\Debug\SessionTestUnit.csprojResolveAssemblyReference.cache
+D:\GitHub\Test-Unit-Project\SessionTestUnit\obj\Debug\SessionTestUnit.AboutBox1.resources
+D:\GitHub\Test-Unit-Project\SessionTestUnit\obj\Debug\SessionTestUnit.Form1.resources
+D:\GitHub\Test-Unit-Project\SessionTestUnit\obj\Debug\SessionTestUnit.Properties.Resources.resources
+D:\GitHub\Test-Unit-Project\SessionTestUnit\obj\Debug\SessionTestUnit.resultForm.resources
+D:\GitHub\Test-Unit-Project\SessionTestUnit\obj\Debug\SessionTestUnit.SettingsForm.resources
+D:\GitHub\Test-Unit-Project\SessionTestUnit\obj\Debug\SessionTestUnit.csproj.GenerateResource.Cache
+D:\GitHub\Test-Unit-Project\SessionTestUnit\bin\Debug\Platonus Tester.exe.config
+D:\GitHub\Test-Unit-Project\SessionTestUnit\bin\Debug\Platonus Tester.exe
+D:\GitHub\Test-Unit-Project\SessionTestUnit\bin\Debug\Platonus Tester.pdb
+D:\GitHub\Test-Unit-Project\SessionTestUnit\obj\Debug\Platonus Tester.exe
+D:\GitHub\Test-Unit-Project\SessionTestUnit\obj\Debug\Platonus Tester.pdb
